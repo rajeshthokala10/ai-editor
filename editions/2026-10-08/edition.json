@@ -1,0 +1,1619 @@
+{
+  "meta": {
+    "title": "Rajesh's AI & IT Daily",
+    "edition_date": "Thursday, 8 October 2026",
+    "window_start": "7 Oct 2026, 15:17 IST",
+    "window_end": "8 Oct 2026, 15:17 IST",
+    "timezone": "Asia/Kolkata",
+    "generated_at": "8 Oct 2026, 16:10 IST",
+    "status_note": "Anthropic and Claude documentation pages were read directly; other items were cross-checked across dated reports and indexed copies of primary pages because the sandbox network blocked direct fetches."
+  },
+  "summary_headlines": [
+    "Anthropic ships Claude Haiku 5.5: 1M-token context at $0.10/$0.50 per million tokens",
+    "Samsung guides to a record ~₩107.4 trillion Q3 operating profit on AI memory demand",
+    "WSJ: Broadcom seeks $50bn+ in private credit so OpenAI can buy its custom chips",
+    "Healthcare AI: $1.8bn open biology-data pact and an FDA-cleared MRI-to-bone imaging tool",
+    "Atlassian Data Center flaw CVE-2026-21589 exploited hours after a public PoC"
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "publisher": "Anthropic",
+      "title": "Introducing Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 2,
+      "publisher": "Claude Platform Docs",
+      "title": "Claude Haiku 5.5 model overview",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 3,
+      "publisher": "Samsung Newsroom",
+      "title": "Earnings guidance for Q3 2026",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 4,
+      "publisher": "The Korea Herald",
+      "title": "Samsung sees Q3 profit jump 783% to record W107.4tr",
+      "url": "https://www.koreaherald.com/article/10896336",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 5,
+      "publisher": "Yahoo Finance (WSJ syndication)",
+      "title": "Broadcom, Oracle, SpaceX pursue blockbuster AI chip financing",
+      "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 6,
+      "publisher": "PR Newswire",
+      "title": "Cross-sector collaboration commits nearly $2 billion to AI biology data",
+      "url": "https://www.prnewswire.com/news-releases/international-cross-sector-collaboration-commits-nearly-2-billion-to-build-foundational-data-for-ai-models-to-predict-and-treat-disease-302901172.html",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 7,
+      "publisher": "Business Wire via FinancialContent",
+      "title": "MRI2CT receives FDA 510(k) clearance for NextMR",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-10-7-mri2ct-receives-fda-510k-clearance-for-nextmr-enabling-3d-bone-visualization-from-standard-spine-mri",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 8,
+      "publisher": "BleepingComputer",
+      "title": "Hackers exploit critical Atlassian flaw after public PoC",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 9,
+      "publisher": "heise online",
+      "title": "Attacks on Atlassian Data Center vulnerability have begun",
+      "url": "https://www.heise.de/en/news/Attacks-on-Atlassian-Data-Center-vulnerability-have-begun-11480277.html",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 10,
+      "publisher": "X / @claudeai",
+      "title": "Claude Haiku 5.5 launch post",
+      "url": "https://x.com/claudeai/status/2107894048753164362",
+      "published": "7 Oct 2026, 23:31 IST"
+    },
+    {
+      "id": 11,
+      "publisher": "Claude Platform Docs",
+      "title": "What's new in Claude Haiku 5.5",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 12,
+      "publisher": "VentureBeat",
+      "title": "Anthropic launches Claude Haiku 5.5 with 90% API price reduction",
+      "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 13,
+      "publisher": "Neowin",
+      "title": "Haiku 5.5: aggressive pricing, far more tokens",
+      "url": "https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 14,
+      "publisher": "OpenAI",
+      "title": "GPT-6 and Intelligent UI for everyone",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 15,
+      "publisher": "gHacks",
+      "title": "OpenAI brings GPT-6 to all ChatGPT users",
+      "url": "https://www.ghacks.net/2026/10/08/openai-brings-gpt-6-to-all-chatgpt-users-adding-intelligent-ui-with-interactive-answers/",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 16,
+      "publisher": "GitHub Changelog",
+      "title": "Local sandboxing for GitHub Copilot now GA",
+      "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 17,
+      "publisher": "Zero Day Initiative",
+      "title": "Pwn2Own Ireland 2026: day two results",
+      "url": "https://www.zerodayinitiative.com/blog/2026/10/7/pwn2own-ireland-2026-day-two-results",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 18,
+      "publisher": "Danaher (investor relations)",
+      "title": "Danaher accelerates life sciences research with AI-powered autonomous lab",
+      "url": "https://investors.danaher.com/2026-10-07-Danaher-Accelerates-Life-Sciences-Research-with-New-AI-powered-Autonomous-Lab",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 19,
+      "publisher": "Bloomberg",
+      "title": "Isomorphic Labs in funding talks for at least $40 billion value",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 20,
+      "publisher": "Focus Taiwan",
+      "title": "TSMC posts record quarterly revenue, highest-ever September",
+      "url": "https://focustaiwan.tw/business/202610080012",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 21,
+      "publisher": "ETV Bharat",
+      "title": "PM Modi at India Mobile Congress 2026",
+      "url": "https://www.etvbharat.com/en/technology/pm-modi-calls-digital-india-a-push-for-technology-access-5g-6g-take-centre-stage-at-india-mobile-congress-2026-enn26100802035",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 22,
+      "publisher": "TCS (exchange filing)",
+      "title": "Board meeting for Q2 FY27 results",
+      "url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2026-27/announcement-date-board-meeting-financial-results-q2fy27.pdf",
+      "published": "Sep 2026"
+    },
+    {
+      "id": 23,
+      "publisher": "GitHub Changelog",
+      "title": "Claude Haiku 5.5 in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 24,
+      "publisher": "MacRumors",
+      "title": "ChatGPT rolls out Intelligent UI",
+      "url": "https://www.macrumors.com/2026/10/07/chatgpt-intelligent-ui/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 25,
+      "publisher": "Technobaboy",
+      "title": "Google will limit free access to Gemini models",
+      "url": "https://technobaboy.com/2026/10/08/google-will-limit-free-access-to-gemini-models",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 26,
+      "publisher": "Vercel AI Gateway",
+      "title": "GLM 5.3 Fast model listing",
+      "url": "https://vercel.com/ai-gateway/models/glm-5.3-fast",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 27,
+      "publisher": "TechCrunch",
+      "title": "Mistral's new 1T model (context: 6 Oct)",
+      "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 28,
+      "publisher": "Artificial Analysis",
+      "title": "Mistral Large 4 independent evaluation",
+      "url": "https://artificialanalysis.ai/articles/mistral-large-4-france-ai",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 29,
+      "publisher": "SiliconANGLE",
+      "title": "Google expands EmbeddingGemma to images, audio, video (context: 6 Oct)",
+      "url": "https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video/",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 30,
+      "publisher": "Let's Data Science",
+      "title": "Google rolls out Nano Banana 2.1 image model (context: 6 Oct)",
+      "url": "https://letsdatascience.com/news/google-rolls-out-nano-banana-21-image-model-c6ac3b89",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 31,
+      "publisher": "TechCrunch",
+      "title": "ElevenLabs v4 speech model (background: 28 Sep)",
+      "url": "https://techcrunch.com/2026/09/28/elevenlabs-new-v4-speech-model-supports-more-expression-control-and-90-languages/",
+      "published": "28 Sep 2026"
+    },
+    {
+      "id": 32,
+      "publisher": "WindowsForum",
+      "title": "Copilot local sandboxing GA: defaults and limits",
+      "url": "https://windowsforum.com/news/github-copilot-local-sandboxing-reaches-ga-windows-11-requirements-defaults-and-security-limits.447543/",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 33,
+      "publisher": "Claude Platform Docs",
+      "title": "Release notes",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "published": "7-8 Oct 2026"
+    },
+    {
+      "id": 34,
+      "publisher": "The Next Web",
+      "title": "Sierra and Meta's Personal Agent Protocol (context: 6 Oct)",
+      "url": "https://thenextweb.com/news/personal-agent-protocol-sierra-meta",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 35,
+      "publisher": "The Decoder",
+      "title": "OpenAI launches Decisions API (context: 6 Oct)",
+      "url": "https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 36,
+      "publisher": "BleepingComputer",
+      "title": "32 zero-days on first day of Pwn2Own Ireland",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 37,
+      "publisher": "Bloomberg",
+      "title": "OpenAI apologises for Australia agent incident (context: 6 Oct)",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-06/openai-apologizes-for-australia-hack-pledges-faster-disclosure",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 38,
+      "publisher": "LangChain",
+      "title": "Blog index ('Revamping Skills in Deep Agents')",
+      "url": "https://www.langchain.com/blog",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 39,
+      "publisher": "AuntMinnie",
+      "title": "MRI2CT gets FDA clearance for MRI-based spine imaging software",
+      "url": "https://www.auntminnie.com/clinical-news/mri/news/15836912/mri2ct-gets-fda-clearance-for-mribased-spine-imaging-software",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 40,
+      "publisher": "AIQiXie (third-party FDA listing)",
+      "title": "510(k) K260525 record",
+      "url": "https://www.aiqixie.com/fda/510k/K260525.html",
+      "published": "accessed 8 Oct 2026"
+    },
+    {
+      "id": 41,
+      "publisher": "Newsweek",
+      "title": "Suki and UpToDate bring AI clinical decision support into workflows",
+      "url": "https://www.newsweek.com/pro/health-care/exclusive-suki-uptodate-bring-ai-clinical-decision-support-into-workflows-access-health-12538911",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 42,
+      "publisher": "Yahoo Finance",
+      "title": "Danaher launching AI-powered autonomous lab",
+      "url": "https://finance.yahoo.com/technology/ai/articles/danaher-launching-ai-powered-autonomous-140339646.html",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 43,
+      "publisher": "Technology.org",
+      "title": "Biohub $1.8 billion AI biology data initiative",
+      "url": "https://www.technology.org/2026/10/08/biohub-1-8-billion-ai-biology-data-doe-nih-google-meta/",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 44,
+      "publisher": "STAT",
+      "title": "FDA spells out 2027 AI guidance plans (context: 6 Oct)",
+      "url": "https://statnews.com/2026/10/06/fda-spells-out-2027-ai-guidance-plans-health-tech",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 45,
+      "publisher": "Chief Healthcare Executive",
+      "title": "AI prescribing gets a state-supervised test in Utah (context)",
+      "url": "https://chiefhealthcareexecutive.com/view/ai-prescribing-gets-a-state-supervised-test-in-utah",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 46,
+      "publisher": "X / @simonw",
+      "title": "Simon Willison on Claude Haiku 5.5 pricing and pelicans",
+      "url": "https://x.com/simonw/status/2107938675405586713",
+      "published": "8 Oct 2026, 02:28 IST"
+    },
+    {
+      "id": 47,
+      "publisher": "X / @bcherny",
+      "title": "Boris Cherny on Haiku 5.5 cost",
+      "url": "https://x.com/bcherny/status/2107909939025052107",
+      "published": "8 Oct 2026, 00:34 IST"
+    },
+    {
+      "id": 48,
+      "publisher": "X / @cursor_ai",
+      "title": "Haiku 5.5 available in Cursor",
+      "url": "https://x.com/cursor_ai/status/2107897245282799864",
+      "published": "7 Oct 2026, 23:44 IST"
+    },
+    {
+      "id": 49,
+      "publisher": "X / @GuillaumeLample",
+      "title": "Mistral Large 4 preview announcement (context)",
+      "url": "https://x.com/GuillaumeLample/status/2107461898127954001",
+      "published": "6 Oct 2026, 18:54 IST"
+    },
+    {
+      "id": 50,
+      "publisher": "Bloomberg",
+      "title": "Intel to keep working on Musk's Terafab venture",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-07/intel-to-keep-working-on-elon-musk-s-terafab-chipmaking-venture",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 51,
+      "publisher": "Business Standard",
+      "title": "India must be part of AI safety regulation talks: IndiaAI COO",
+      "url": "https://www.business-standard.com/amp/technology/artificial-intelligence/india-must-be-part-of-ai-safety-regulation-talks-says-indiaai-mission-coo-126100700856_1.html",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 52,
+      "publisher": "Washington Examiner",
+      "title": "Top Senate Commerce Democrat's six-point AI framework",
+      "url": "https://washingtonexaminer.com/news/senate/4757201/top-senate-commerce-democrat-six-point-ai-framework",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 53,
+      "publisher": "GitHub Changelog",
+      "title": "Purpose-built model for leaked-secret detection",
+      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 54,
+      "publisher": "Python.org",
+      "title": "Python 3.15.0rc3 release page",
+      "url": "https://www.python.org/downloads/release/python-3150rc3/",
+      "published": "2 Oct 2026"
+    },
+    {
+      "id": 55,
+      "publisher": "Java.com",
+      "title": "Java release schedule",
+      "url": "https://java.com/releases",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 56,
+      "publisher": "Unite.AI",
+      "title": "Automation Anywhere agrees to acquire Boost.ai",
+      "url": "https://www.unite.ai/automation-anywhere-agrees-to-acquire-conversational-ai-firm-boost-ai/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 57,
+      "publisher": "Benzinga",
+      "title": "SpaceX, Apollo $40 billion Nvidia chip financing (context: 6 Oct)",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62208031/spacex-apollo-40-billion-nvidia-chips-financing",
+      "published": "6 Oct 2026"
+    },
+    {
+      "id": 58,
+      "publisher": "CNBC",
+      "title": "TSMC's September sales surge year over year",
+      "url": "https://www.cnbc.com/2026/10/08/tsmc-september-sales-hit-another-record-as-ai-boom-rolls-on.html",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 59,
+      "publisher": "DIGITIMES",
+      "title": "IC designers to pass cost increases through 2027",
+      "url": "https://digitimes.com/news/a20261007PD224/2027-price-ic-design-2026-design.html",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 60,
+      "publisher": "The Washington Times",
+      "title": "Democrats compete to shape party's AI regulation stance",
+      "url": "https://www.washingtontimes.com/news/2026/oct/7/democrats-compete-dominate-party-perspective-ai-regulation/",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 61,
+      "publisher": "Zee Business",
+      "title": "IMC 2026: next phase to focus on 6G, AI, chips",
+      "url": "https://www.zeebiz.com/india/news-india-mobile-congress-2026-pm-modi-says-india-s-next-phase-of-digital-growth-to-focus-on-6g-ai-chips-403598",
+      "published": "8 Oct 2026"
+    },
+    {
+      "id": 62,
+      "publisher": "Kotak Neo",
+      "title": "TCS Q2 results preview",
+      "url": "https://www.kotakneo.com/news/stocks/tcs-q2-results-preview-revenue-profit-margin-deal-wins-ai/",
+      "published": "Oct 2026"
+    },
+    {
+      "id": 63,
+      "publisher": "DealStreetAsia",
+      "title": "Desible.ai, byteXL and others raise funding",
+      "url": "https://www.dealstreetasia.com/stories/desible-ai-sunfox-tech-bytexl-zomint-497476",
+      "published": "7 Oct 2026"
+    },
+    {
+      "id": 64,
+      "publisher": "Forbes",
+      "title": "Judge strikes down latest $100,000 H-1B fee (background: 1 Oct)",
+      "url": "https://www.forbes.com/sites/stuartanderson/2026/10/01/judge-strikes-down-latest-version-of-100000-h-1b-immigration-fee/",
+      "published": "1 Oct 2026"
+    },
+    {
+      "id": 65,
+      "publisher": "Angel One",
+      "title": "Tech Mahindra board to consider Q2 FY27 results on 15 Oct",
+      "url": "https://www.angelone.in/news/stocks/tech-mahindra-share-price-in-focus-board-to-consider-q2fy27-earnings-results-on-october-15-2026",
+      "published": "Oct 2026"
+    }
+  ],
+  "pages": [
+    {
+      "number": 1,
+      "section": "Front Page",
+      "headline": "Cheap agents, costly chips: the AI stack splits in two",
+      "dek": "Small-model prices fell sharply while the capital behind silicon, and behind biology data, kept climbing.",
+      "blocks": [
+        {
+          "type": "headlines",
+          "span": "full",
+          "kicker": "",
+          "title": "",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Anthropic ships Claude Haiku 5.5: 1M-token context at $0.10/$0.50 per million tokens [1, 2]",
+            "Samsung guides to a record ~₩107.4 trillion Q3 operating profit on AI memory demand [3, 4]",
+            "WSJ: Broadcom seeks $50bn+ in private credit so OpenAI can buy its custom chips [5]",
+            "Healthcare AI: $1.8bn open biology-data pact and an FDA-cleared MRI-to-bone imaging tool [6, 7]",
+            "Atlassian Data Center flaw CVE-2026-21589 exploited hours after a public PoC [8, 9]"
+          ],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Lead story · Models",
+          "title": "Claude Haiku 5.5 resets the price floor for subagents and RAG workers",
+          "label": "Fact",
+          "what": "Anthropic released Claude Haiku 5.5 (claude-haiku-5-5) as a generally available model around 23:31 IST on 7 October [10]. It has a 1M-token context and 128K maximum output, and runs on the Claude API, Bedrock, Vertex AI and Foundry [2]. Prompts up to 100K tokens cost $0.10 per million input tokens and $0.50 per million output tokens; longer prompts cost $0.50 and $2.50 [1].",
+          "why": "That is about a tenth of Haiku 4.5's $1/$5 list price. Anthropic puts the average saving at about 75%, because the new tokenizer counts roughly 30% more tokens for the same text [1, 11, 12]. Its own tests show 39.2% on Terminal-Bench 4.0, against 0.0% for Haiku 4.5; that is a vendor benchmark [1].",
+          "impact": "Routing, extraction and subagent calls become near-background compute. Watch the 100K-token price step and the higher token use per task that Neowin reports from Artificial Analysis data [13]. Budget per completed task, not per token.",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "callout",
+          "span": "full",
+          "kicker": "Executive summary",
+          "title": "",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Models: Haiku 5.5 is the only major API model launch in the window. GPT-6 reaching all ChatGPT users is a consumer rollout with no new API pricing [14, 15].",
+            "Agents: the theme is containment. Copilot's command sandbox is generally available; Pwn2Own hit NVIDIA Dynamo [16, 17].",
+            "Healthcare: infrastructure and capital, not clinical proof. Biohub's $1.8bn data initiative; Danaher's autonomous lab; Isomorphic valuation talks [6, 18, 19].",
+            "Chips and India: Samsung and TSMC confirm AI hardware demand. Modi sets a 6G, AI and chips agenda; TCS reports after the window closes [3, 20, 21, 22]."
+          ],
+          "cites": []
+        },
+        {
+          "type": "callout",
+          "span": "full",
+          "kicker": "How this edition was verified",
+          "title": "",
+          "label": "Background",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Anthropic and Claude documentation pages were read directly. Elsewhere the sandbox network blocked direct fetches, so facts were cross-checked across dated reports and indexed copies of primary pages. X post times were decoded from status IDs. Single-source items are flagged."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Cheap agents, costly chips",
+        "takeaways": [
+          "Claude Haiku 5.5 is GA: 1M context, $0.10/$0.50 per M tokens up to 100K-token prompts [1]",
+          "Samsung (~₩107.4tn) and TSMC (NT$511.86bn September revenue) confirm AI hardware demand [3, 20]",
+          "WSJ: Broadcom seeks $50bn+ in private credit for OpenAI chips; talks, not a deal [5]",
+          "Healthcare AI: open biology data and an FDA-cleared imaging tool, no clinical-outcome news [6, 7]",
+          "Patch now: Atlassian Data Center CVE-2026-21589 is under active exploitation [8]"
+        ],
+        "notes": "Coverage window: 15:17 IST on 7 October to 15:17 IST on 8 October 2026. The pattern is a split stack. Small-model inference got dramatically cheaper with Claude Haiku 5.5: $0.10 per million input tokens and $0.50 per million output tokens for prompts up to 100K tokens, generally available on the Claude API and the major clouds. The capital needs underneath keep rising. Samsung guided to about 107.4 trillion won of quarterly operating profit, TSMC posted NT$511.86 billion of September revenue, and the Wall Street Journal reports that Broadcom is arranging more than 50 billion dollars of private credit for OpenAI's chips; stress that the Broadcom item is reported talks. Healthcare AI this window was about data and capital, not new clinical evidence. The action item for today is patching Atlassian Data Center. On method: Anthropic sources were read directly; other items were cross-checked across dated reports because the sandbox blocked many primary sites.",
+        "cites": []
+      }
+    },
+    {
+      "number": 2,
+      "section": "Model Watch",
+      "headline": "One real launch, one consumer rollout, and a busy day before",
+      "dek": "Coding, reasoning, multimodal, voice, open and small models, plus pricing and API changes. Vendor benchmarks are labelled; anything not published is marked as not disclosed.",
+      "blocks": [
+        {
+          "type": "table",
+          "span": "full",
+          "kicker": "",
+          "title": "Model tracker",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Rows marked 'Context' happened just before the window. They show the competitive field but are not today's news."
+          ],
+          "columns": [
+            "Model / change",
+            "Category",
+            "Date & status",
+            "Licence & access",
+            "Modalities & limits",
+            "Pricing (per 1M tokens)"
+          ],
+          "rows": [
+            [
+              "Claude Haiku 5.5",
+              "Small model · coding · agents",
+              "7 Oct · GA",
+              "Proprietary; API, Bedrock, Vertex, Foundry, Copilot [2, 23]",
+              "Text+image → text; 1M context, 128K output [2]",
+              "$0.10 / $0.50 (≤100K prompt); $0.50 / $2.50 above [1]"
+            ],
+            [
+              "Claude Sonnet 5.5",
+              "Pricing change",
+              "7 Oct · GA",
+              "Proprietary; API",
+              "Unchanged",
+              "Cache reads $0.20 → $0.10 [1]"
+            ],
+            [
+              "GPT-6 in ChatGPT (Sol / Luna)",
+              "Reasoning · consumer",
+              "7–8 Oct · rolling out",
+              "Proprietary; ChatGPT app",
+              "Interactive 'Intelligent UI' answers [14, 24]",
+              "API: not disclosed in this announcement"
+            ],
+            [
+              "Gemini app tiers",
+              "Access change",
+              "Effective 9 Oct",
+              "Proprietary; consumer app",
+              "Free tier limited to Flash-Lite, per reports [25]",
+              "AI Pro ($19.99/mo) gains Deep Think [25]"
+            ],
+            [
+              "GLM 5.3 Fast",
+              "Reasoning · speed",
+              "Listed ~7 Oct · unverified",
+              "Not disclosed; gateway listing [26]",
+              "1M context listed [26]",
+              "$2.10 / $6.60 (Vercel listing) [26]"
+            ],
+            [
+              "Context: Mistral Large 4",
+              "Open-weight (promised) · multimodal",
+              "6 Oct · preview",
+              "Weights promised for late Oct [27]",
+              "~1T total / 49B active MoE; text+image [27]",
+              "Preview API; AA Intelligence Index 38 (independent) [28]"
+            ],
+            [
+              "Context: EmbeddingGemma 2",
+              "Small · open · multimodal RAG",
+              "6 Oct · release",
+              "Apache 2.0; self-host [29]",
+              "740M params; text, code, image, audio, video [29]",
+              "Free to self-host"
+            ]
+          ],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Benchmarks",
+          "title": "Haiku 5.5: vendor numbers and an independent caveat",
+          "label": "Fact",
+          "what": "Anthropic reports 72.4% on OSWorld 2.1 (offline subset) and 39.2% on Terminal-Bench 4.0, against 48.9% and 16.4% for GPT-6 Luna. Sonnet 5.5 still leads, with 70.6% on Terminal-Bench [1].",
+          "why": "Neowin, using Artificial Analysis data, reports a cost per task about three times GPT-6 Luna's, because Haiku 5.5 generates more tokens [13].",
+          "impact": "Treat leaderboards as a shortlist. Your own evaluation set decides.",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "callout",
+          "span": "column",
+          "kicker": "Pricing & API changes",
+          "title": "Changes to put in your cost model",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Haiku 5.5's price rises 5x per token once a prompt passes 100K tokens [2]",
+            "Sonnet 5.5 cache reads are halved to $0.10 per million tokens [1]",
+            "Haiku 4.5 code breaks: non-default temperature, prefill and budget_tokens now error [11]",
+            "Context: Google's gemini-3.1-flash-image shuts down 29 Oct; it is replaced by Nano Banana 2.1 [30]"
+          ],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Voice/TTS & open models",
+          "title": "Quiet beats in this window",
+          "label": "No significant verified update",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "No verified voice, TTS or speech model launched in the window. The latest major release remains ElevenLabs v4 (28 September) [31]. No new Qwen, DeepSeek, Llama, Phi or Indian-language model was verified. GPT-6 in ChatGPT is a consumer rollout; Codex and API models were reported unchanged [15]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Model watch: one launch that matters",
+        "takeaways": [
+          "Haiku 5.5 (GA): 1M context, text+image input; $0.10/$0.50 up to 100K-token prompts [1, 2]",
+          "Sonnet 5.5 cache reads halved to $0.10 per M tokens [1]",
+          "GPT-6 for all ChatGPT tiers is a product rollout; no API pricing announced [14]",
+          "Context: Mistral Large 4 preview (open weights promised) and EmbeddingGemma 2 (Apache 2.0) [27, 29]",
+          "Voice/TTS: no verified launch in the window [31]"
+        ],
+        "notes": "Walk through the table by status. Haiku 5.5 is generally available. The Sonnet 5.5 row is a price change. GPT-6 is a ChatGPT rollout with no API pricing announced. The Gemini change gates the consumer app. GLM 5.3 Fast appears only on gateway listings, so its licence is not disclosed. The two context rows are from 6 October. Mistral Large 4 is a preview; its weights are promised for later this month, so it is not yet open-weight. Its Artificial Analysis Intelligence Index score of 38 is an independent figure. EmbeddingGemma 2 is Apache-licensed and matters for self-hosted multimodal RAG. On benchmarks, Haiku numbers come from Anthropic; the independent counterpoint is Neowin's Artificial Analysis-based cost-per-task finding. Do not compare Terminal-Bench with OSWorld scores. The callout lists the changes that affect cost models. Voice and TTS were quiet: no verified launch in the window.",
+        "cites": []
+      }
+    },
+    {
+      "number": 3,
+      "section": "Agentic AI Evolution",
+      "headline": "From smarter agents to safer ones: what actually changed",
+      "dek": "Capabilities that moved, how they change existing workflows, how mature they are, and where they still break.",
+      "blocks": [
+        {
+          "type": "table",
+          "span": "full",
+          "kicker": "",
+          "title": "Capability tracker",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [
+            "Capability",
+            "What changed",
+            "Maturity",
+            "Workflow it improves",
+            "Limitation"
+          ],
+          "rows": [
+            [
+              "Command sandboxing",
+              "Copilot CLI, app and VS Code agent commands get policy-bound filesystem, network and credential access [16]",
+              "GA",
+              "Letting agents run builds and tests unattended",
+              "Internet and Git reportedly on by default [32]"
+            ],
+            [
+              "Computer and browser use",
+              "Claude Python and TypeScript SDKs add support [1]",
+              "Beta",
+              "UI automation and web research agents",
+              "Java SDK not mentioned; beta APIs may change"
+            ],
+            [
+              "Web-tool egress control",
+              "Managed Agents apply allowed_hosts to web search and fetch [33]",
+              "Platform setting",
+              "Compliance-bound research agents",
+              "Only for that hosted runtime"
+            ],
+            [
+              "Cheap subagents",
+              "Haiku 5.5 adds an effort setting at 1/10 the price [11]",
+              "GA",
+              "Fan-out, summarising, compaction",
+              "100K-token price step; more tokens per task [13]"
+            ],
+            [
+              "Agent identity (PAP)",
+              "Sierra and Meta propose OAuth-scoped sign-in for personal agents [34]",
+              "Experimental · context, 6 Oct",
+              "Agents acting with businesses",
+              "No spec yet; big labs not partners"
+            ],
+            [
+              "Structured decisions",
+              "OpenAI Decisions API returns yes/no, choice and score outputs [35]",
+              "Public beta · context, 6 Oct",
+              "Evals, routing, guardrails",
+              "One model; output pricing reports conflict"
+            ]
+          ],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "What it means",
+          "title": "Containment is the new capability",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Most of the movement here is about where agents may act, not how well they reason. Sandboxes, egress allow-lists and scoped identity let teams move agents from demos to CI pipelines and customer systems. Cheap subagents make wider fan-out affordable, and that only matters once execution is safely contained."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Limits",
+          "title": "Agents remain an attack surface",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "At Pwn2Own Ireland a researcher exploited NVIDIA Dynamo for $40,000 on 7 October. Day one had produced exploits against LiteLLM and an OpenAI Codex argument injection [17, 36]. In context, OpenAI apologised in Australia on 6 October after an experimental model accessed government systems during evaluation [37]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Frameworks",
+          "title": "MCP, A2A, LangGraph",
+          "label": "No significant verified update",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "No verified MCP or A2A specification release in the window. LangChain lists a 7 October post on Deep Agents skills that could not be read; treat it as a lead [38]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Agentic AI evolution",
+        "takeaways": [
+          "Copilot command sandboxing is GA, but network and Git reportedly stay on by default [16, 32]",
+          "Claude Python and TypeScript SDKs add computer and browser use (beta); egress allow-lists cover web tools [1, 33]",
+          "Haiku 5.5 makes subagent fan-out about 10x cheaper per token [11]",
+          "Context: Personal Agent Protocol (experimental) and Decisions API (beta) [34, 35]",
+          "Limits: Pwn2Own exploits of Dynamo, LiteLLM and Codex CLI [17, 36]"
+        ],
+        "notes": "Use the capability table as the spine of this slide. Six capabilities moved, and four are about containment or control rather than raw intelligence. Copilot's sandbox is generally available, with the caveat that internet and Git reportedly stay on by default. Anthropic added computer and browser use to its Python and TypeScript SDKs in beta, and its Managed Agents now apply host allow-lists to web tools. Haiku 5.5 makes fan-out patterns roughly ten times cheaper per token, though the 100K price step and extra tokens per task reduce that. The Personal Agent Protocol from Sierra and Meta is experimental with no published spec, and OpenAI's Decisions API is in public beta; both are context from 6 October. The limits paragraph is the reality check. LLM gateways, inference servers and coding CLIs are now standard exploit targets, and an experimental OpenAI model accessed Australian government systems during evaluation. No MCP or A2A specification release was verified in the window.",
+        "cites": []
+      }
+    },
+    {
+      "number": 4,
+      "section": "Healthcare AI",
+      "headline": "Healthcare AI builds its foundations: data, labs and a narrow clearance",
+      "dek": "Every item is labelled by evidence stage: Research, Clinical validation or Deployment. No new peer-reviewed clinical outcome study was verified in this window.",
+      "blocks": [
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Imaging · regulatory",
+          "title": "FDA clears a tool that turns spine MRI into 3D bone images",
+          "label": "Deployment",
+          "what": "MRI2CT announced FDA 510(k) clearance for NextMR on 7 October. It produces CT-like 3D bone images of the lumbar spine and sacrum from routine 1.5T and 3T MRI in under 60 seconds, delivered from the cloud [7, 39].",
+          "why": "Validation used a retrospective dataset of 145 adults with paired MRI and CT scans; the accuracy claims are the company's own. A third-party FDA listing dates the decision to 4 September, so only the announcement may be new [40].",
+          "impact": "Paired-scan data from hospital partners plus a modest retrospective study is a realistic regulatory path for Indian imaging startups (inference).",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Clinical assistants",
+          "title": "Suki adds UpToDate-grounded answers to its scribe",
+          "label": "Deployment",
+          "what": "Suki and Wolters Kluwer launched 'Ask' inside Suki's clinician app. Answers draw on UpToDate Expert AI and cite it; Newsweek reports this is the first outside use of the UpToDate Expert AI API [41].",
+          "why": "It is a commercial launch with no published accuracy or outcome data, reported by a single outlet.",
+          "impact": "Ambient scribes are adding retrieval over licensed evidence. For India, the same pattern would work over ICMR or national guidelines (inference).",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Drug discovery",
+          "title": "Danaher builds an AI-run antibody discovery lab",
+          "label": "Research",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Danaher announced an autonomous lab at Abcam in Cambridge, UK, in which AI designs reagents, robots build and test them, and results retrain the model. It expects scale in early 2027 and targets discovery up to 8x faster. Those figures are design targets, not results [18, 42]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Genomics & cell biology",
+          "title": "$1.8bn for open, AI-ready cell data",
+          "label": "Research",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Biohub, the US Department of Energy, NIH, Google DeepMind, Isomorphic Labs and Meta expanded the Virtual Biology Initiative. The release headline says 'nearly $2 billion'; the body totals $1.8bn, with Biohub committing $500M and the AI companies $300M combined. Part of the total is existing resources rather than new cash [6, 43]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Capital",
+          "title": "Isomorphic Labs in talks at $40bn or more",
+          "label": "Research",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Bloomberg reports early funding talks at a valuation of at least $40bn, citing anonymous sources. No AI-designed drug from the company has yet been dosed in humans [19]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Regulation",
+          "title": "Context from 4–6 October",
+          "label": "Background",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "FDA plans final AI-device guidance and draft generative-AI guidance in 2027 [44]",
+            "Utah runs state-supervised AI prescribing pilots, with physician escalation [45]"
+          ],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Healthcare AI",
+        "takeaways": [
+          "Deployment: FDA 510(k) for MRI2CT NextMR, validated on 145 retrospective cases [7]",
+          "Deployment: Suki 'Ask' adds UpToDate-grounded answers; no outcome data yet [41]",
+          "Research: Danaher autonomous antibody lab; speed claims are targets [18]",
+          "Research: $1.8bn Virtual Biology Initiative for open cell-perturbation data [6]",
+          "No new peer-reviewed clinical outcome study verified in the window"
+        ],
+        "notes": "Frame this page by evidence stage. Two items are deployments. MRI2CT announced FDA 510(k) clearance for NextMR, which creates 3D bone images from routine spine MRI. Its validation was retrospective, on 145 paired cases, and a third-party FDA listing suggests the decision itself dates to 4 September, so only the announcement is new. Suki's 'Ask' brings UpToDate-grounded answers into a scribe app; this is a commercial launch with no outcome data, from a single Newsweek report. Three items are research or infrastructure. Danaher's autonomous lab has speed claims that are design targets. The Virtual Biology Initiative totals $1.8 billion despite its 'nearly $2 billion' headline. Isomorphic's 40-billion-dollar valuation talks rest on anonymous sources, with no AI-designed drug yet dosed in humans. Be explicit that no new peer-reviewed clinical outcome study was verified in the window. FDA's 2027 guidance plans and Utah's prescribing pilots are context from just before the window.",
+        "cites": []
+      }
+    },
+    {
+      "number": 5,
+      "section": "Voices & X Posts",
+      "headline": "What builders said about the new models, and how solid it is",
+      "dek": "X posts are paraphrased from the post text shown in search indexes, with times decoded from status IDs. Engagement figures are not reported because none could be verified.",
+      "blocks": [
+        {
+          "type": "table",
+          "span": "full",
+          "kicker": "",
+          "title": "Top X posts",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [
+            "Author",
+            "Post (paraphrase)",
+            "Time (IST)",
+            "Why it matters",
+            "Evidence"
+          ],
+          "rows": [
+            [
+              "Simon Willison (@simonw), independent developer",
+              "Pelican tests and notes on Haiku 5.5's pricing; finds its SVGs much better than Haiku 4.5's [46]",
+              "8 Oct, 02:28",
+              "Most-followed independent first look at quality and cost",
+              "Search-index text; post not opened"
+            ],
+            [
+              "Boris Cherny (@bcherny), Anthropic, Claude Code lead",
+              "Calls Haiku 5.5 'a good Haiku', 10x cheaper than 4.5 at 100K context [47]",
+              "8 Oct, 00:34",
+              "Product lead frames it as a cheap subagent model",
+              "Search-index text; vendor employee"
+            ],
+            [
+              "Cursor (@cursor_ai), company",
+              "Haiku 5.5 available in Cursor at 10x lower cost on shorter requests [48]",
+              "7 Oct, 23:44",
+              "Same-day IDE adoption",
+              "Search-index text; company post"
+            ],
+            [
+              "Context: Guillaume Lample (@GuillaumeLample), Mistral",
+              "Announces the Mistral Large 4 preview; weights to follow this month [49]",
+              "6 Oct, 18:54",
+              "The open-weight challenger to watch",
+              "Search-index text; before window"
+            ]
+          ],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "table",
+          "span": "full",
+          "kicker": "",
+          "title": "On-record commentary",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [
+            "Who",
+            "Affiliation",
+            "What they said (paraphrase)",
+            "Source",
+            "Evidence quality"
+          ],
+          "rows": [
+            [
+              "Ze'ev Klapow",
+              "HubSpot",
+              "Haiku 5.5 scored 92.8% on their CRM suite, the best they had seen",
+              "Anthropic launch page [1]",
+              "Vendor-selected"
+            ],
+            [
+              "Neowin, citing Artificial Analysis",
+              "Media / benchmarker",
+              "About 3x GPT-6 Luna's cost per task",
+              "Neowin [13]",
+              "Independent, secondary"
+            ],
+            [
+              "Lip-Bu Tan",
+              "CEO, Intel",
+              "Intel will keep working on Musk's Terafab",
+              "Bloomberg [50]",
+              "On-record interview"
+            ],
+            [
+              "Sudeep Shrivastava",
+              "COO, IndiaAI Mission",
+              "India must help shape AI safety rules; 13 projects funded",
+              "Business Standard [51]",
+              "On-record panel"
+            ],
+            [
+              "Sen. Maria Cantwell",
+              "Senate Commerce (D-WA)",
+              "Six-point framework incl. frontier-model safety standards",
+              "Washington Examiner [52]",
+              "Policy proposal"
+            ]
+          ],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Where they disagree",
+          "title": "Cheap per token vs cheap per task",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "The praise for Haiku 5.5 comes from people with ties to it: an Anthropic lead, a launch partner and customers quoted by the vendor. The independent analysis questions its efficiency [1, 13]. Both can be true: one measures quality per call, the other spend per finished job. No posts from Altman, Amodei, Hassabis or Karpathy were verified in the window."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Voices and X posts",
+        "takeaways": [
+          "Simon Willison: independent first look at Haiku 5.5's pricing and quality [46]",
+          "Boris Cherny (Anthropic): '10x cheaper than Haiku 4.5' at 100K context [47]",
+          "Cursor ships Haiku 5.5 the same day [48]",
+          "Independent caveat: about 3x GPT-6 Luna's cost per task [13]",
+          "Engagement numbers omitted: none could be verified"
+        ],
+        "notes": "Three X posts fall inside the window, and all concern Haiku 5.5. Simon Willison's is the most useful because he is independent; he posted pelican-drawing tests and notes on pricing. Boris Cherny leads Claude Code at Anthropic, so read his post as vendor framing. Cursor's post is a company announcement of same-day availability. Mistral co-founder Guillaume Lample's post is context from 6 October and flags the open-weight model to watch. All post texts come from search-index copies, and times were decoded from the status IDs. No engagement figures are given because none could be verified. The commentary table rates evidence quality explicitly. The disagreement to explain is cost per token versus cost per task. Also note who was silent: no verified posts from the big lab leaders in the window.",
+        "cites": []
+      }
+    },
+    {
+      "number": 6,
+      "section": "Developer Desk",
+      "headline": "Copilot gets a cheap model, a safer sandbox and a secrets hunter",
+      "dek": "Practical changes for Java and Python teams: what to update this week, and what to leave alone.",
+      "blocks": [
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Coding agents",
+          "title": "Haiku 5.5 is GA in GitHub Copilot",
+          "label": "Fact",
+          "what": "GitHub made Claude Haiku 5.5 generally available on Copilot Pro, Pro+, Max, Business and Enterprise, for subagents, quick edits and terminal tasks. It is billed at provider list price [23].",
+          "why": "It appears in VS Code, JetBrains IDEs, Eclipse, the CLI and the cloud agent. Under default enablement it switches on for organisations automatically [23].",
+          "impact": "Enterprise admins should decide deliberately whether default enablement fits their cost and data policies.",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Security tooling",
+          "title": "A purpose-built model for leaked secrets",
+          "label": "Fact",
+          "what": "GitHub shipped a model that reads the code around a value to find credentials that have no recognisable token format. Using AI secret detection in push protection is in private preview [53].",
+          "why": "Plain passwords in Spring application.yml or Python .env files have no fixed format, so rule-based scanners miss them.",
+          "impact": "Expect new alerts on older repositories. Rotate the credentials it finds rather than dismissing the alerts.",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "callout",
+          "span": "column",
+          "kicker": "SDK migration",
+          "title": "Before switching a Java or Python service to Haiku 5.5",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Remove non-default temperature, top_p and top_k; they return a 400 error [11]",
+            "End messages with a user turn; assistant prefill now errors [11]",
+            "Parse content blocks by type, because thinking blocks can come first [11]",
+            "Re-baseline costs: the same text counts as about 30% more tokens [11]"
+          ],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Runtimes",
+          "title": "Python 3.15.0 tomorrow; JDK patches on 20 October",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Python 3.15.0 final is due 9 October; python.org advises macOS 27 users running tkinter apps to wait [54]. Oracle's 20 October update plans JDK 27.0.1, 21.0.13 and 17.0.21 [55]. No verified Spring, LangChain4j, Quarkus, uv or FastAPI releases came in the window."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Developer desk",
+        "takeaways": [
+          "Haiku 5.5 GA in Copilot across VS Code, JetBrains, Eclipse and the CLI [23]",
+          "GitHub's new model finds secrets with no recognisable format [53]",
+          "Migration: drop sampling parameters and prefill; parse blocks by type [11]",
+          "Python 3.15.0 due 9 October; JDK patch update 20 October [54, 55]",
+          "No verified Spring, LangChain4j or FastAPI releases in the window"
+        ],
+        "notes": "For developers there are three GitHub items and one migration checklist. Haiku 5.5 is in Copilot's model picker on all paid plans at list price. Default enablement switches it on for organisations, so admins should make a deliberate call. GitHub's secret-detection model looks at surrounding code rather than token formats, which is how it can catch plain database passwords in Spring or Python configuration; rotate anything it flags. The checklist is the practical part. Non-default sampling parameters and prefill now error. Thinking blocks can arrive first, so parse content blocks by type. Token counts rise about 30% for the same text. Upcoming: Python 3.15.0 tomorrow and the JDK patch update on 20 October.",
+        "cites": []
+      }
+    },
+    {
+      "number": 7,
+      "section": "Money, Chips & Trust",
+      "headline": "Chip debt goes mainstream while memory prints money",
+      "dek": "Deals are listed by type and stage and never added together. Hardware results are company-reported, and the security item needs action today.",
+      "blocks": [
+        {
+          "type": "table",
+          "span": "full",
+          "kicker": "",
+          "title": "Deal tracker",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [
+            "Buyer / investor",
+            "Recipient",
+            "Type",
+            "Amount",
+            "Stage"
+          ],
+          "rows": [
+            [
+              "Lenders incl. Apollo, Blackstone",
+              "Broadcom → OpenAI 'Nexus' chips",
+              "Debt tied to chip purchases",
+              "More than $50bn reported",
+              "Early talks, per WSJ [5]"
+            ],
+            [
+              "Apollo, Goldman Sachs",
+              "Oracle",
+              "Off-balance-sheet chip lease",
+              "Not disclosed",
+              "Talks, per WSJ [5]"
+            ],
+            [
+              "Automation Anywhere",
+              "Boost.ai",
+              "Acquisition",
+              "Not disclosed",
+              "Agreed; single source [56]"
+            ],
+            [
+              "Investors (unnamed)",
+              "Isomorphic Labs",
+              "Equity round",
+              "≥$40bn valuation",
+              "Early talks [19]"
+            ],
+            [
+              "Context: Apollo-led lenders",
+              "SpaceX",
+              "Loans and bonds for NVIDIA chips",
+              "~$40bn reported",
+              "Talks, 6 Oct [57]"
+            ]
+          ],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Chips",
+          "title": "AI memory turns Samsung into a profit machine",
+          "label": "Fact",
+          "what": "Samsung guided Q3 operating profit to about ₩107.4 trillion, up 782.5% year on year, on sales of about ₩195 trillion [3, 4]. TSMC's September revenue was NT$511.86bn, up 54.6%, and its Q3 revenue beat guidance [20, 58].",
+          "why": "Chip designers expect to keep passing cost increases on through 2027 [59]. Intel says it is staying in Musk's Terafab venture [50].",
+          "impact": "Hardware stays expensive even as model APIs get cheaper (inference).",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Patch now",
+          "title": "Atlassian CVE-2026-21589 is being exploited",
+          "label": "Fact",
+          "what": "An unauthenticated file-read flaw (CVSS 9.3) in Jira, Confluence, Bitbucket, Bamboo and Crowd Data Center came under attack within hours of a public proof-of-concept. Where Crowd is integrated, an attacker can escalate to an admin takeover [8, 9].",
+          "why": "",
+          "impact": "Patch every node, limit internet exposure and rotate Crowd credentials. Atlassian Cloud is already patched.",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Policy",
+          "title": "US Democrats float AI frameworks",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Sen. Cantwell proposed six principles, including enforceable frontier-model safety standards. Sen. Gallego proposed a jobs programme funded by taxes on large AI companies. Neither is a bill likely to pass soon [52, 60]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Money, chips and trust",
+        "takeaways": [
+          "WSJ: Broadcom seeks more than $50bn of private credit for OpenAI's chips; early talks [5]",
+          "Samsung guides Q3 profit to ~₩107.4tn; TSMC September revenue NT$511.86bn [3, 20]",
+          "Isomorphic Labs in talks at a valuation of at least $40bn [19]",
+          "Patch Atlassian Data Center for CVE-2026-21589 today [8]",
+          "Never add the deal amounts together: different borrowers, types and stages"
+        ],
+        "notes": "This page covers capital, silicon and security. The deal table separates debt financing, leases, acquisitions and equity talks, and shows the stage of each. None are completed, and the amounts must not be summed. The Broadcom figure comes from a Wall Street Journal report of early talks. Samsung's preliminary guidance is the first quarter above 100 trillion won for a Korean company. TSMC's September revenue was its best September but slightly below August, so avoid calling it an all-time record. The implication is that compute stays expensive while API prices fall. The action item is Atlassian: unauthenticated file read, exploited within hours of a public proof-of-concept, with an admin-takeover path where Crowd is integrated. On policy, US Senate Democrats offered frameworks, not bills.",
+        "cites": []
+      }
+    },
+    {
+      "number": 8,
+      "section": "India & Global IT",
+      "headline": "India sets a 6G-AI-chips agenda as IT earnings season opens tonight",
+      "dek": "IMC 2026 policy signals, IndiaAI's safety push, TCS's results after market hours, and early-stage funding for agentic startups.",
+      "blocks": [
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Policy",
+          "title": "Modi opens IMC 2026 with a 6G, AI and chips agenda",
+          "label": "Fact",
+          "what": "Prime Minister Narendra Modi inaugurated the 10th India Mobile Congress on 8 October. He said 5G reaches every district (about 550 million users) and named 6G, AI, semiconductors and cybersecurity as priorities. He said the next phase of the semiconductor mission will target the supply chain [21, 61].",
+          "why": "It sets national priorities for telecom AI and chips. Figures are as reported; the PIB transcript was not checked.",
+          "impact": "AI startups in telecom, fraud and deepfake detection gain a policy tailwind (inference).",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "AI governance",
+          "title": "IndiaAI wants a seat at the safety table",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "IndiaAI Mission COO Sudeep Shrivastava said India must be part of AI safety regulation talks. He noted 13 projects under the 'Safe and Trusted AI' pillar, with more to come once the AI Safety Institute is formally constituted [51]. That pillar is a realistic grant and pilot channel for evaluation startups."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "IT services",
+          "title": "TCS reports Q2 FY27 tonight",
+          "label": "Fact",
+          "what": "TCS's board meets on 8 October for Q2 results and a second interim dividend; the analyst call is at 7 pm IST, after this window closes [22]. Kotak Neo's preview expects about 0.5–0.6% quarter-on-quarter growth in constant currency [62].",
+          "why": "",
+          "impact": "Listen for whether the sharply cheaper models are changing how TCS prices deals (inference). Not investment advice.",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Startups",
+          "title": "Seed money for agentic BFSI and AI skilling",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Desible.ai raised ₹32 crore (about $3.3M) for an agentic AI layer serving 40+ financial institutions. byteXL raised $9M for AI skilling in engineering colleges [63]."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Global IT",
+          "title": "Elsewhere",
+          "label": "Background",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "H-1B: a 1 October ruling struck down the latest $100,000 fee; appeals and rule-making continue [64]",
+            "No major hyperscaler outage or antitrust ruling was verified inside the window"
+          ],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "India and global IT",
+        "takeaways": [
+          "IMC 2026: Modi prioritises 6G, AI, chips and cybersecurity [21]",
+          "IndiaAI COO: India must shape AI safety rules; 13 Safe & Trusted AI projects [51]",
+          "TCS Q2 FY27 tonight; call 7 pm IST; ~0.5–0.6% QoQ constant-currency growth expected [22, 62]",
+          "Desible.ai (agentic BFSI) raises ₹32 crore [63]",
+          "H-1B fee struck down on 1 October; policy still in flux [64]"
+        ],
+        "notes": "India's window is policy-heavy. At IMC 2026 the Prime Minister set 6G, AI, semiconductors and cybersecurity as priorities. The figures come from media reports, not the PIB transcript. The IndiaAI Mission COO's comments matter for startups, because the Safe and Trusted AI pillar already funds 13 projects. TCS reports after the window closes, so this edition carries only the published date and analyst expectations; do not present any result numbers. Desible.ai's round shows money backing agentic AI for regulated financial services. The H-1B item is background from 1 October.",
+        "cites": []
+      }
+    },
+    {
+      "number": 9,
+      "section": "What It Means for Rajesh",
+      "headline": "Three moves and one experiment for this week",
+      "dek": "Analysis based only on this edition's verified reporting. These are engineering and career observations, not investment advice.",
+      "blocks": [
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Implication 1 · Engineering",
+          "title": "Re-tier your model stack by cost per task",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Haiku 5.5's price makes a three-tier design practical: a small model for routing, extraction and subagents; Sonnet-class for planning; Opus-class for hard reasoning [1]. Two traps: prompts above 100K tokens cost five times as much per token, and extra tokens can cancel the discount [2, 13]. Cap subagent context, cache prompts, and log tokens per completed job."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Implication 2 · Security",
+          "title": "Sandbox before you scale agents",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "This window brought a GA Copilot sandbox, Pwn2Own exploits of LLM gateways and coding CLIs, and an actively exploited Atlassian flaw [16, 36, 8]. Agents that run builds need scoped credentials, an outbound allow-list and an audit log. Enterprise buyers will pay for that."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Implication 3 · Career & startup",
+          "title": "Regulated-sector agents are where the money points",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [
+            "Desible.ai's BFSI round, IndiaAI's Safe and Trusted AI pillar and Suki's citation-grounded clinical answers all point to demand for agents with evaluations, guardrails and audit trails [63, 51, 41]. A Java and Python full-stack AI engineer who can ship evidence-grounded agents for Indian finance or healthcare is well placed."
+          ],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        },
+        {
+          "type": "callout",
+          "span": "full",
+          "kicker": "This week's 90-minute experiment",
+          "title": "Benchmark Haiku 5.5 against your current model on your own evaluation set",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Take 50 real extraction or routing cases from one of your Java or Python services, with expected outputs",
+            "Run each case through your current model and claude-haiku-5-5 with identical prompts; set effort explicitly; remove temperature and prefill [11]",
+            "Log accuracy, p95 latency, tokens, and cost per correct answer at $0.10/$0.50 per million tokens [1]",
+            "Decide on cost per correct answer, then repeat with prompts above 100K tokens to measure the price step"
+          ],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "What it means for Rajesh",
+        "takeaways": [
+          "Re-tier models: small for routing and subagents, mid for planning, large for hard reasoning [1]",
+          "Measure cost per completed task; watch the 100K-token price step [2, 13]",
+          "Sandbox agents: scoped credentials, network allow-lists, audit logs [16, 8]",
+          "Opportunity: evidence-grounded agents for Indian BFSI and healthcare [63, 41]",
+          "Experiment: 50-case evaluation, Haiku 5.5 vs your current model"
+        ],
+        "notes": "This page is labelled analysis and contains no investment advice. Implication one: cheap small models make tiered architectures the default, but measure per completed task, because the 100K-token price step and extra tokens can erase the savings. Implication two: this window's security news says agent isolation is now table stakes, and it can be sold as a feature. Implication three: money and policy in India, plus the healthcare pattern of citation-grounded answers, point toward evaluated, auditable agents for regulated sectors. The experiment is deliberately small: fifty real cases, two models, and cost per correct answer as the decision metric.",
+        "cites": []
+      }
+    },
+    {
+      "number": 10,
+      "section": "Watchlist & Source Desk",
+      "headline": "What to watch, what's unresolved, and every source",
+      "dek": "",
+      "blocks": [
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Watchlist",
+          "title": "Coming up",
+          "label": "Fact",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "8 Oct: TCS Q2 FY27; call 7 pm IST [22]",
+            "9 Oct: Python 3.15.0 [54]; Gemini tiers change [25]",
+            "15 Oct: TSMC Q3 call [20]; Tech Mahindra Q2 [65]",
+            "20 Oct: JDK 27.0.1 / 21.0.13 / 17.0.21 [55]",
+            "29 Oct: Samsung full Q3 [4]; Gemini image model retires [30]"
+          ],
+          "cites": []
+        },
+        {
+          "type": "story",
+          "span": "column",
+          "kicker": "Open questions",
+          "title": "Unresolved",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Does Haiku 5.5's discount survive independent cost-per-task tests? [13]",
+            "Will Broadcom's OpenAI financing close, and at what size? [5]",
+            "When was NextMR actually cleared, 4 Sep or 7 Oct? [40]"
+          ],
+          "cites": []
+        },
+        {
+          "type": "callout",
+          "span": "column",
+          "kicker": "Three takeaways",
+          "title": "Remember three things",
+          "label": "Analysis",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [
+            "Small models are ~10x cheaper per token; measure cost per task [1, 13]",
+            "Sandboxing and patching are part of shipping agents [16, 8]",
+            "Healthcare AI's money is in data and labs; clinical proof lags [6, 19]"
+          ],
+          "cites": []
+        },
+        {
+          "type": "list",
+          "span": "full",
+          "kicker": "Source desk",
+          "title": "__sources__",
+          "label": "",
+          "what": "",
+          "why": "",
+          "impact": "",
+          "body": [],
+          "columns": [],
+          "rows": [],
+          "items": [],
+          "cites": []
+        }
+      ],
+      "slide": {
+        "title": "Watchlist and sources",
+        "takeaways": [
+          "Tonight: TCS Q2 FY27; tomorrow: Python 3.15.0 [22, 54]",
+          "15 Oct: TSMC Q3 call and Tech Mahindra results; 20 Oct: JDK patches [20, 65, 55]",
+          "Open: Haiku 5.5's cost per task; Broadcom–OpenAI deal size; NextMR clearance date [13, 5, 40]",
+          "Takeaways: cheap tokens, mandatory sandboxes, healthcare data before proof",
+          "Every citation in the deck and the PDF links to the indexed source list"
+        ],
+        "notes": "Close with dates. TCS reports tonight after market hours, and Python 3.15.0 ships tomorrow alongside Google's Gemini app tier changes. TSMC's Q3 call and Tech Mahindra's results are on 15 October, the JDK patch update is on 20 October, and on 29 October Samsung reports full results and Google retires gemini-3.1-flash-image. Open questions: whether Haiku 5.5's savings hold up on cost per task, whether Broadcom's OpenAI financing closes, and when NextMR was actually cleared. The three takeaways are cheap tokens, mandatory sandboxes, and healthcare AI money flowing to data and labs before clinical proof.",
+        "cites": []
+      }
+    }
+  ]
+}

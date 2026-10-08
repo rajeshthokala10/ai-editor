@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ meta.title }} — {{ meta.edition_date }}</title>
+<style>
+@font-face { font-family: "Playfair"; src: url("{{ fonts }}/PlayfairDisplay.ttf"); font-weight: 400 900; }
+@font-face { font-family: "Fraunces"; src: url("{{ fonts }}/Fraunces.ttf"); font-weight: 100 900; }
+@font-face { font-family: "DMSerif"; src: url("{{ fonts }}/DMSerifDisplay.ttf"); font-weight: 400; }
+@font-face { font-family: "Bodoni"; src: url("{{ fonts }}/BodoniModa.ttf"); font-weight: 400 900; }
+@font-face { font-family: "SourceSerif"; src: url("{{ fonts }}/SourceSerif4.ttf"); font-weight: 200 900; font-style: normal; }
+@font-face { font-family: "SourceSerif"; src: url("{{ fonts }}/SourceSerif4-Italic.ttf"); font-weight: 200 900; font-style: italic; }
+@font-face { font-family: "Newsreader"; src: url("{{ fonts }}/Newsreader.ttf"); font-weight: 200 800; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url("{{ fonts }}/Newsreader-Italic.ttf"); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: "Literata"; src: url("{{ fonts }}/Literata.ttf"); font-weight: 200 900; font-style: normal; }
+@font-face { font-family: "Literata"; src: url("{{ fonts }}/Literata-Italic.ttf"); font-weight: 200 900; font-style: italic; }
+@font-face { font-family: "SpaceGrotesk"; src: url("{{ fonts }}/SpaceGrotesk.ttf"); font-weight: 300 700; }
+@font-face { font-family: "PlexSans"; src: url("{{ fonts }}/IBMPlexSans.ttf"); font-weight: 100 700; }
+@font-face { font-family: "InterUI"; src: url("{{ fonts }}/Inter-Regular.otf"); font-weight: 400; }
+@font-face { font-family: "InterUI"; src: url("{{ fonts }}/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "InterUI"; src: url("{{ fonts }}/Inter-Bold.otf"); font-weight: 700; }
+
+:root {
+  --paper: {{ t.paper }}; --ink: {{ t.ink }}; --primary: {{ t.primary }}; --accent: {{ t.accent }};
+  --accent-soft: {{ t.accent_soft }}; --rule: {{ t.rule }}; --stripe: {{ t.stripe }};
+  --head: "{{ t.head_font }}", Georgia, serif; --body: "{{ t.body_font }}", Georgia, serif; --ui: "{{ t.ui_font }}", Arial, sans-serif;
+  --hw: {{ t.head_weight }};
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+body { font-family: var(--body); -webkit-print-color-adjust: exact; print-color-adjust: exact;
+       font-variant-numeric: lining-nums; hyphens: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* --fs is tuned per page by the auto-fit pass so every page is full but never clipped */
+.page { --fs: 1; font-size: calc(9.4pt * var(--fs)); line-height: 1.4;
+        width: 210mm; height: 297mm; padding: 11mm 13mm 9mm; display: flex; flex-direction: column;
+        break-after: page; overflow: hidden; position: relative; background: var(--paper); }
+.page:last-child { break-after: auto; }
+
+/* running header */
+.runhead { display: flex; justify-content: space-between; align-items: baseline;
+           font-family: var(--ui); font-size: 7pt; letter-spacing: .08em; text-transform: uppercase;
+           color: var(--ink); opacity: .9; border-bottom: 1.6pt solid var(--primary); padding-bottom: 1.6mm; }
+.runhead .brand { font-family: var(--head); font-weight: var(--hw); letter-spacing: 0; text-transform: none; font-size: 11pt; color: var(--primary); }
+.runhead .sec { color: var(--accent); font-weight: 700; }
+
+/* mastheads */
+.masthead .over { font-family: var(--ui); font-size: 7pt; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.masthead h1 { font-family: var(--head); font-weight: 900; font-size: 41pt; line-height: 1; margin: 1.6mm 0; color: var(--primary); letter-spacing: -.01em; }
+.masthead .dateline { display: flex; justify-content: space-between; gap: 4mm; font-family: var(--ui); font-size: 7.2pt;
+                      border-top: .6pt solid var(--rule); padding-top: 1.4mm; }
+.masthead .dateline b { color: var(--primary); }
+.m-centered { text-align: center; border-bottom: 3pt double var(--primary); padding-bottom: 2.2mm; }
+.m-flag { display: grid; grid-template-columns: 1fr auto; align-items: end; border-bottom: 2.4pt solid var(--primary); padding-bottom: 2mm; column-gap: 6mm; }
+.m-flag h1 { font-size: 44pt; margin: 0; }
+.m-flag .side { font-family: var(--ui); font-size: 7.2pt; text-align: right; line-height: 1.5; }
+.m-flag .side b { color: var(--primary); }
+.m-flag .over { grid-column: 1 / -1; }
+.m-band { background: var(--primary); color: #fff; margin: -11mm -13mm 0; padding: 7mm 13mm 3mm; }
+.m-band h1 { color: #fff; }
+.m-band .over { color: #fff; opacity: .85; }
+.m-band .dateline { border-top-color: rgba(255,255,255,.35); }
+.m-band .dateline b { color: #fff; }
+
+.content { flex: 1 1 auto; overflow: hidden; padding-top: 3mm; min-height: 0; }
+
+.pagehead { margin-bottom: .9em; }
+.pagehead .section { font-family: var(--ui); font-size: .8em; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.pagehead h2 { font-family: var(--head); font-weight: var(--hw); font-size: {{ '2.15em' }}; line-height: 1.08; margin: .1em 0 .2em;
+               color: var(--primary); text-transform: {{ t.headline_case }}; }
+.pagehead h2.long { font-size: 1.85em; }
+.pagehead .dek { font-style: italic; font-size: 1.08em; margin: 0; opacity: .88; }
+
+.full { margin-bottom: .9em; }
+.cols { column-gap: 6.5mm; column-rule: .5pt solid var(--rule); margin-bottom: .9em; column-fill: balance; }
+.cols.c2 { column-count: 2; }
+.cols.c3 { column-count: 3; column-gap: 5mm; }
+.cols > .blk { break-inside: avoid-column; }
+.cols > .blk.long { break-inside: auto; }
+.blk { margin: 0 0 .95em; }
+.blk + .blk { border-top: .5pt solid var(--rule); padding-top: .75em; }
+.cols > .blk:first-child, .full > .blk:first-child { border-top: 0; padding-top: 0; }
+
+.kicker { font-family: var(--ui); font-size: .74em; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+          color: var(--accent); margin-bottom: .25em; display: flex; flex-wrap: wrap; gap: .6em; align-items: center; }
+.badge { font-size: .86em; letter-spacing: .06em; padding: .05em .55em; border-radius: .3em; border: .5pt solid currentColor; background: var(--paper); }
+.badge.Analysis, .badge.Opinion { color: var(--primary); }
+.badge.Background { color: #6b6f78; }
+.badge.No { color: #8a5a00; }
+.badge.Research { color: #5b4fa8; }
+.badge.Clinical { color: #b0631a; }
+.badge.Deployment { color: #1d7a3e; }
+h3 { font-family: var(--head); font-weight: var(--hw); font-size: 1.36em; line-height: 1.14; margin: 0 0 .35em; color: var(--primary); }
+.c3 h3 { font-size: 1.22em; }
+.c3 p { text-align: left; hyphens: auto; }
+.lead h3 { font-size: 1.95em; line-height: 1.08; }
+.lead p { font-size: 1.06em; }
+{% if t.dropcap %}.lead p:first-of-type::first-letter { font-family: var(--head); font-weight: var(--hw); float: left; font-size: 3.1em; line-height: .86; padding: .06em .08em 0 0; color: var(--accent); }
+.lead p:first-of-type .lab { display: none; }{% endif %}
+p { margin: 0 0 .45em; text-align: justify; }
+p .lab { font-family: var(--ui); font-weight: 700; font-size: .76em; letter-spacing: .04em; text-transform: uppercase; color: var(--primary); margin-right: .35em; }
+p .lab.inf { color: var(--accent); }
+sup.c { font-family: var(--ui); font-size: .62em; font-weight: 700; color: var(--accent); vertical-align: super; line-height: 0; white-space: nowrap; }
+
+/* front-page lead layouts */
+.split { display: grid; grid-template-columns: 1.62fr 1fr; column-gap: 6.5mm; margin-bottom: .9em; }
+.split > .aside { border-left: .5pt solid var(--rule); padding-left: 5mm; }
+.aside .top5 { grid-template-columns: 1fr; }
+.aside .top5 li:first-child { grid-column: auto; }
+
+.top5 { list-style: none; counter-reset: t; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 6.5mm; row-gap: .5em; }
+.top5 li { counter-increment: t; display: grid; grid-template-columns: 2em 1fr; align-items: start;
+           font-family: var(--head); font-weight: var(--hw); font-size: 1.05em; line-height: 1.2; color: var(--primary);
+           border-top: .5pt solid var(--rule); padding-top: .45em; }
+.top5 li::before { content: counter(t); font-family: var(--head); font-weight: 900; font-size: 1.6em; color: var(--accent); line-height: .9; }
+.top5 li:first-child { grid-column: 1 / -1; font-size: 1.2em; }
+
+ul.items { margin: 0; padding-left: 1.2em; }
+ul.items li { margin-bottom: .3em; }
+ul.items li::marker { color: var(--accent); }
+ol.srcs { margin: 0; padding: 0; list-style: none; font-size: 6.9pt; line-height: 1.26; column-count: 2; column-gap: 6mm; }
+ol.srcs .dom { font-family: var(--ui); font-size: .9em; opacity: .7; }
+ol.srcs li { break-inside: avoid; margin-bottom: .32em; display: grid; grid-template-columns: 2.6em 1fr; }
+ol.srcs .n { font-family: var(--ui); font-weight: 700; color: var(--accent); }
+ol.srcs a { color: var(--primary); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 1.5px; }
+ol.srcs .pub { font-weight: 600; }
+
+.callout { background: var(--accent-soft); border-radius: 1.6mm; padding: .9em 1.1em; }
+.blk.callout + .blk, .blk + .blk.callout { border-top: 0; }
+.callout h3 { font-size: 1.2em; }
+
+table { width: 100%; border-collapse: collapse; font-family: var(--ui); font-size: .74em; line-height: 1.28; }
+thead th { background: var(--primary); color: #fff; text-align: left; font-weight: 700; padding: .45em .55em; vertical-align: bottom; }
+tbody td { padding: .4em .55em; border-bottom: .5pt solid var(--rule); vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--stripe); }
+tbody td:first-child { font-weight: 700; color: var(--primary); }
+.tcap { font-family: var(--ui); font-size: .7em; opacity: .8; margin-top: .35em; }
+
+.foot { display: flex; justify-content: space-between; gap: 4mm; font-family: var(--ui); font-size: 6.6pt;
+        border-top: .6pt solid var(--rule); padding-top: 1.4mm; margin-top: 1mm; opacity: .9; }
+.foot .pg { font-weight: 700; color: var(--primary); white-space: nowrap; }
+</style>
+</head>
+<body class="theme-{{ t.key }}">
+{% macro block(b) -%}
+<div class="blk {{ b.type }}{% if b.lead %} lead{% endif %}{% if b.long %} long{% endif %}">
+  {% if b.kicker or b.label %}
+  <div class="kicker">{% if b.kicker %}<span>{{ b.kicker }}</span>{% endif %}{% if b.label %}<span class="badge {{ b.label.split(' ')[0] }}">{{ b.label }}</span>{% endif %}</div>
+  {% endif %}
+  {% if b.title and b.type != 'headlines' and b.title != '__sources__' %}<h3>{{ b.title | cite }}</h3>{% endif %}
+  {% if b.type == 'headlines' %}
+    <ol class="top5">{% for it in b['items'] %}<li><span>{{ it | cite }}</span></li>{% endfor %}</ol>
+  {% elif b.type == 'table' %}
+    <table>
+      <thead><tr>{% for c in b.columns %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in b.rows %}<tr>{% for cell in r %}<td>{{ cell | cite }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table>
+    {% if b.body or b.cites %}<div class="tcap">{% for p in b.body %}{{ p | cite }} {% endfor %}{{ b.cites | cites }}</div>{% endif %}
+  {% elif b.title == '__sources__' %}
+    <ol class="srcs">{% for s in sources %}<li id="s{{ s.id }}"><span class="n">[{{ s.id }}]</span><span><span class="pub">{{ s.publisher }}</span>: <a href="{{ s.url }}">{{ s.title | truncate(58, True, "…") }}</a>{% if s.published %} · {{ s.published }}{% endif %}</span></li>{% endfor %}</ol>
+  {% else %}
+    {% if b.what %}<p><span class="lab">What happened</span>{{ b.what | cite }}</p>{% endif %}
+    {% if b.why %}<p><span class="lab">Why it matters</span>{{ b.why | cite }}</p>{% endif %}
+    {% if b.impact %}<p><span class="lab inf">Likely impact (inference)</span>{{ b.impact | cite }}</p>{% endif %}
+    {% for p in b.body %}<p>{{ p | cite }}</p>{% endfor %}
+    {% if b['items'] %}<ul class="items">{% for it in b['items'] %}<li>{{ it | cite }}</li>{% endfor %}</ul>{% endif %}
+    {% if b.cites %}<p style="text-align:left">{{ b.cites | cites }}</p>{% endif %}
+  {% endif %}
+</div>
+{%- endmacro %}
+
+{% for page in pages %}
+<section class="page" id="p{{ page.number }}" data-page="{{ page.number }}">
+  {% if page.number == 1 %}
+    {% if t.masthead == 'flag' %}
+    <header class="masthead m-flag">
+      <div class="over">Customised daily briefing · AI engineering · Indian &amp; global IT</div>
+      <h1>{{ meta.title }}</h1>
+      <div class="side"><b>{{ meta.edition_date }}</b><br>Window: {{ meta.window_start }}<br>to {{ meta.window_end }} ({{ meta.timezone }})<br>{{ t.name }} edition · 10 pages</div>
+    </header>
+    {% else %}
+    <header class="masthead {{ 'm-band' if t.masthead == 'band' else 'm-centered' }}">
+      <div class="over">Customised daily briefing · AI engineering · Indian &amp; global IT</div>
+      <h1>{{ meta.title }}</h1>
+      <div class="dateline">
+        <span><b>{{ meta.edition_date }}</b></span>
+        <span>Coverage window: <b>{{ meta.window_start }}</b> to <b>{{ meta.window_end }}</b> ({{ meta.timezone }})</span>
+        <span>{{ t.name }} edition · 10 pages</span>
+      </div>
+    </header>
+    {% endif %}
+  {% else %}
+  <header class="runhead">
+    <span class="brand">{{ meta.title }}</span>
+    <span class="sec">{{ page.section }}</span>
+    <span>{{ meta.edition_date }}</span>
+  </header>
+  {% endif %}
+
+  <div class="content">
+    <div class="pagehead">
+      {% if page.number != 1 %}<div class="section">Page {{ page.number }} · {{ page.section }}</div>{% endif %}
+      <h2{% if page.headline|length > 70 %} class="long"{% endif %}>{{ page.headline }}</h2>
+      {% if page.dek %}<p class="dek">{{ page.dek | cite }}</p>{% endif %}
+    </div>
+
+    {% for group in page.groups %}
+      {% if group.kind == 'split' %}
+      <div class="split"><div>{{ block(group.main) }}</div><div class="aside">{{ block(group.aside) }}</div></div>
+      {% elif group.kind == 'cols' %}
+      <div class="cols c{{ group.ncols }}">{% for b in group.blocks %}{{ block(b) }}{% endfor %}</div>
+      {% else %}
+      <div class="full">{% for b in group.blocks %}{{ block(b) }}{% endfor %}</div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <footer class="foot">
+    <span>{{ meta.edition_date }} · window {{ meta.window_start }} to {{ meta.window_end }}</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page {{ page.number }} of {{ pages | length }}</span>
+  </footer>
+</section>
+{% endfor %}
+</body>
+</html>

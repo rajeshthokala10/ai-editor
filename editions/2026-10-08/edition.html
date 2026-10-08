@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rajesh&#39;s AI &amp; IT Daily — Thursday, 8 October 2026</title>
+<style>
+@font-face { font-family: "Playfair"; src: url("file:///home/user/ai-editor/assets/fonts/PlayfairDisplay.ttf"); font-weight: 400 900; }
+@font-face { font-family: "Fraunces"; src: url("file:///home/user/ai-editor/assets/fonts/Fraunces.ttf"); font-weight: 100 900; }
+@font-face { font-family: "DMSerif"; src: url("file:///home/user/ai-editor/assets/fonts/DMSerifDisplay.ttf"); font-weight: 400; }
+@font-face { font-family: "Bodoni"; src: url("file:///home/user/ai-editor/assets/fonts/BodoniModa.ttf"); font-weight: 400 900; }
+@font-face { font-family: "SourceSerif"; src: url("file:///home/user/ai-editor/assets/fonts/SourceSerif4.ttf"); font-weight: 200 900; font-style: normal; }
+@font-face { font-family: "SourceSerif"; src: url("file:///home/user/ai-editor/assets/fonts/SourceSerif4-Italic.ttf"); font-weight: 200 900; font-style: italic; }
+@font-face { font-family: "Newsreader"; src: url("file:///home/user/ai-editor/assets/fonts/Newsreader.ttf"); font-weight: 200 800; font-style: normal; }
+@font-face { font-family: "Newsreader"; src: url("file:///home/user/ai-editor/assets/fonts/Newsreader-Italic.ttf"); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: "Literata"; src: url("file:///home/user/ai-editor/assets/fonts/Literata.ttf"); font-weight: 200 900; font-style: normal; }
+@font-face { font-family: "Literata"; src: url("file:///home/user/ai-editor/assets/fonts/Literata-Italic.ttf"); font-weight: 200 900; font-style: italic; }
+@font-face { font-family: "SpaceGrotesk"; src: url("file:///home/user/ai-editor/assets/fonts/SpaceGrotesk.ttf"); font-weight: 300 700; }
+@font-face { font-family: "PlexSans"; src: url("file:///home/user/ai-editor/assets/fonts/IBMPlexSans.ttf"); font-weight: 100 700; }
+@font-face { font-family: "InterUI"; src: url("file:///home/user/ai-editor/assets/fonts/Inter-Regular.otf"); font-weight: 400; }
+@font-face { font-family: "InterUI"; src: url("file:///home/user/ai-editor/assets/fonts/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "InterUI"; src: url("file:///home/user/ai-editor/assets/fonts/Inter-Bold.otf"); font-weight: 700; }
+
+:root {
+  --paper: #FFFFFF; --ink: #16181D; --primary: #0F2A3D; --accent: #0F7B5F;
+  --accent-soft: #E2F2EC; --rule: #CBD5D3; --stripe: #F1F6F4;
+  --head: "SpaceGrotesk", Georgia, serif; --body: "Newsreader", Georgia, serif; --ui: "SpaceGrotesk", Arial, sans-serif;
+  --hw: 700;
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+body { font-family: var(--body); -webkit-print-color-adjust: exact; print-color-adjust: exact;
+       font-variant-numeric: lining-nums; hyphens: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* --fs is tuned per page by the auto-fit pass so every page is full but never clipped */
+.page { --fs: 1; font-size: calc(9.4pt * var(--fs)); line-height: 1.4;
+        width: 210mm; height: 297mm; padding: 11mm 13mm 9mm; display: flex; flex-direction: column;
+        break-after: page; overflow: hidden; position: relative; background: var(--paper); }
+.page:last-child { break-after: auto; }
+
+/* running header */
+.runhead { display: flex; justify-content: space-between; align-items: baseline;
+           font-family: var(--ui); font-size: 7pt; letter-spacing: .08em; text-transform: uppercase;
+           color: var(--ink); opacity: .9; border-bottom: 1.6pt solid var(--primary); padding-bottom: 1.6mm; }
+.runhead .brand { font-family: var(--head); font-weight: var(--hw); letter-spacing: 0; text-transform: none; font-size: 11pt; color: var(--primary); }
+.runhead .sec { color: var(--accent); font-weight: 700; }
+
+/* mastheads */
+.masthead .over { font-family: var(--ui); font-size: 7pt; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.masthead h1 { font-family: var(--head); font-weight: 900; font-size: 41pt; line-height: 1; margin: 1.6mm 0; color: var(--primary); letter-spacing: -.01em; }
+.masthead .dateline { display: flex; justify-content: space-between; gap: 4mm; font-family: var(--ui); font-size: 7.2pt;
+                      border-top: .6pt solid var(--rule); padding-top: 1.4mm; }
+.masthead .dateline b { color: var(--primary); }
+.m-centered { text-align: center; border-bottom: 3pt double var(--primary); padding-bottom: 2.2mm; }
+.m-flag { display: grid; grid-template-columns: 1fr auto; align-items: end; border-bottom: 2.4pt solid var(--primary); padding-bottom: 2mm; column-gap: 6mm; }
+.m-flag h1 { font-size: 44pt; margin: 0; }
+.m-flag .side { font-family: var(--ui); font-size: 7.2pt; text-align: right; line-height: 1.5; }
+.m-flag .side b { color: var(--primary); }
+.m-flag .over { grid-column: 1 / -1; }
+.m-band { background: var(--primary); color: #fff; margin: -11mm -13mm 0; padding: 7mm 13mm 3mm; }
+.m-band h1 { color: #fff; }
+.m-band .over { color: #fff; opacity: .85; }
+.m-band .dateline { border-top-color: rgba(255,255,255,.35); }
+.m-band .dateline b { color: #fff; }
+
+.content { flex: 1 1 auto; overflow: hidden; padding-top: 3mm; min-height: 0; }
+
+.pagehead { margin-bottom: .9em; }
+.pagehead .section { font-family: var(--ui); font-size: .8em; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.pagehead h2 { font-family: var(--head); font-weight: var(--hw); font-size: 2.15em; line-height: 1.08; margin: .1em 0 .2em;
+               color: var(--primary); text-transform: none; }
+.pagehead h2.long { font-size: 1.85em; }
+.pagehead .dek { font-style: italic; font-size: 1.08em; margin: 0; opacity: .88; }
+
+.full { margin-bottom: .9em; }
+.cols { column-gap: 6.5mm; column-rule: .5pt solid var(--rule); margin-bottom: .9em; column-fill: balance; }
+.cols.c2 { column-count: 2; }
+.cols.c3 { column-count: 3; column-gap: 5mm; }
+.cols > .blk { break-inside: avoid-column; }
+.cols > .blk.long { break-inside: auto; }
+.blk { margin: 0 0 .95em; }
+.blk + .blk { border-top: .5pt solid var(--rule); padding-top: .75em; }
+.cols > .blk:first-child, .full > .blk:first-child { border-top: 0; padding-top: 0; }
+
+.kicker { font-family: var(--ui); font-size: .74em; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+          color: var(--accent); margin-bottom: .25em; display: flex; flex-wrap: wrap; gap: .6em; align-items: center; }
+.badge { font-size: .86em; letter-spacing: .06em; padding: .05em .55em; border-radius: .3em; border: .5pt solid currentColor; background: var(--paper); }
+.badge.Analysis, .badge.Opinion { color: var(--primary); }
+.badge.Background { color: #6b6f78; }
+.badge.No { color: #8a5a00; }
+.badge.Research { color: #5b4fa8; }
+.badge.Clinical { color: #b0631a; }
+.badge.Deployment { color: #1d7a3e; }
+h3 { font-family: var(--head); font-weight: var(--hw); font-size: 1.36em; line-height: 1.14; margin: 0 0 .35em; color: var(--primary); }
+.c3 h3 { font-size: 1.22em; }
+.c3 p { text-align: left; hyphens: auto; }
+.lead h3 { font-size: 1.95em; line-height: 1.08; }
+.lead p { font-size: 1.06em; }
+
+p { margin: 0 0 .45em; text-align: justify; }
+p .lab { font-family: var(--ui); font-weight: 700; font-size: .76em; letter-spacing: .04em; text-transform: uppercase; color: var(--primary); margin-right: .35em; }
+p .lab.inf { color: var(--accent); }
+sup.c { font-family: var(--ui); font-size: .62em; font-weight: 700; color: var(--accent); vertical-align: super; line-height: 0; white-space: nowrap; }
+
+/* front-page lead layouts */
+.split { display: grid; grid-template-columns: 1.62fr 1fr; column-gap: 6.5mm; margin-bottom: .9em; }
+.split > .aside { border-left: .5pt solid var(--rule); padding-left: 5mm; }
+.aside .top5 { grid-template-columns: 1fr; }
+.aside .top5 li:first-child { grid-column: auto; }
+
+.top5 { list-style: none; counter-reset: t; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 6.5mm; row-gap: .5em; }
+.top5 li { counter-increment: t; display: grid; grid-template-columns: 2em 1fr; align-items: start;
+           font-family: var(--head); font-weight: var(--hw); font-size: 1.05em; line-height: 1.2; color: var(--primary);
+           border-top: .5pt solid var(--rule); padding-top: .45em; }
+.top5 li::before { content: counter(t); font-family: var(--head); font-weight: 900; font-size: 1.6em; color: var(--accent); line-height: .9; }
+.top5 li:first-child { grid-column: 1 / -1; font-size: 1.2em; }
+
+ul.items { margin: 0; padding-left: 1.2em; }
+ul.items li { margin-bottom: .3em; }
+ul.items li::marker { color: var(--accent); }
+ol.srcs { margin: 0; padding: 0; list-style: none; font-size: 6.9pt; line-height: 1.26; column-count: 2; column-gap: 6mm; }
+ol.srcs .dom { font-family: var(--ui); font-size: .9em; opacity: .7; }
+ol.srcs li { break-inside: avoid; margin-bottom: .32em; display: grid; grid-template-columns: 2.6em 1fr; }
+ol.srcs .n { font-family: var(--ui); font-weight: 700; color: var(--accent); }
+ol.srcs a { color: var(--primary); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 1.5px; }
+ol.srcs .pub { font-weight: 600; }
+
+.callout { background: var(--accent-soft); border-radius: 1.6mm; padding: .9em 1.1em; }
+.blk.callout + .blk, .blk + .blk.callout { border-top: 0; }
+.callout h3 { font-size: 1.2em; }
+
+table { width: 100%; border-collapse: collapse; font-family: var(--ui); font-size: .74em; line-height: 1.28; }
+thead th { background: var(--primary); color: #fff; text-align: left; font-weight: 700; padding: .45em .55em; vertical-align: bottom; }
+tbody td { padding: .4em .55em; border-bottom: .5pt solid var(--rule); vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--stripe); }
+tbody td:first-child { font-weight: 700; color: var(--primary); }
+.tcap { font-family: var(--ui); font-size: .7em; opacity: .8; margin-top: .35em; }
+
+.foot { display: flex; justify-content: space-between; gap: 4mm; font-family: var(--ui); font-size: 6.6pt;
+        border-top: .6pt solid var(--rule); padding-top: 1.4mm; margin-top: 1mm; opacity: .9; }
+.foot .pg { font-weight: 700; color: var(--primary); white-space: nowrap; }
+</style>
+</head>
+<body class="theme-builder">
+
+
+
+<section class="page" id="p1" data-page="1" style="--fs:1.044">
+  
+    
+    <header class="masthead m-flag">
+      <div class="over">Customised daily briefing · AI engineering · Indian &amp; global IT</div>
+      <h1>Rajesh&#39;s AI &amp; IT Daily</h1>
+      <div class="side"><b>Thursday, 8 October 2026</b><br>Window: 7 Oct 2026, 15:17 IST<br>to 8 Oct 2026, 15:17 IST (Asia/Kolkata)<br>Builder&#39;s Edition edition · 10 pages</div>
+    </header>
+    
+  
+
+  <div class="content">
+    <div class="pagehead">
+      
+      <h2>Cheap agents, costly chips: the AI stack splits in two</h2>
+      <p class="dek">Small-model prices fell sharply while the capital behind silicon, and behind biology data, kept climbing.</p>
+    </div>
+
+    
+      
+      <div class="full"><div class="blk headlines">
+  
+  
+  
+    <ol class="top5"><li><span>Anthropic ships Claude Haiku 5.5: 1M-token context at $0.10/$0.50 per million tokens<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>,<a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">2</a>]</sup></span></li><li><span>Samsung guides to a record ~₩107.4 trillion Q3 operating profit on AI memory demand<sup class="c">[<a href="https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026">3</a>,<a href="https://www.koreaherald.com/article/10896336">4</a>]</sup></span></li><li><span>WSJ: Broadcom seeks $50bn+ in private credit so OpenAI can buy its custom chips<sup class="c">[<a href="https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html">5</a>]</sup></span></li><li><span>Healthcare AI: $1.8bn open biology-data pact and an FDA-cleared MRI-to-bone imaging tool<sup class="c">[<a href="https://www.prnewswire.com/news-releases/international-cross-sector-collaboration-commits-nearly-2-billion-to-build-foundational-data-for-ai-models-to-predict-and-treat-disease-302901172.html">6</a>,<a href="https://www.financialcontent.com/article/bizwire-2026-10-7-mri2ct-receives-fda-510k-clearance-for-nextmr-enabling-3d-bone-visualization-from-standard-spine-mri">7</a>]</sup></span></li><li><span>Atlassian Data Center flaw CVE-2026-21589 exploited hours after a public PoC<sup class="c">[<a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/">8</a>,<a href="https://www.heise.de/en/news/Attacks-on-Atlassian-Data-Center-vulnerability-have-begun-11480277.html">9</a>]</sup></span></li></ol>
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk story lead">
+  
+  <div class="kicker"><span>Lead story · Models</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Claude Haiku 5.5 resets the price floor for subagents and RAG workers</h3>
+  
+    <p><span class="lab">What happened</span>Anthropic released Claude Haiku 5.5 (claude-haiku-5-5) as a generally available model around 23:31 IST on 7 October<sup class="c">[<a href="https://x.com/claudeai/status/2107894048753164362">10</a>]</sup>. It has a 1M-token context and 128K maximum output, and runs on the Claude API, Bedrock, Vertex AI and Foundry<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">2</a>]</sup>. Prompts up to 100K tokens cost $0.10 per million input tokens and $0.50 per million output tokens; longer prompts cost $0.50 and $2.50<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>That is about a tenth of Haiku 4.5&#x27;s $1/$5 list price. Anthropic puts the average saving at about 75%, because the new tokenizer counts roughly 30% more tokens for the same text<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>,<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>,<a href="https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna">12</a>]</sup>. Its own tests show 39.2% on Terminal-Bench 4.0, against 0.0% for Haiku 4.5; that is a vendor benchmark<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup>.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Routing, extraction and subagent calls become near-background compute. Watch the 100K-token price step and the higher token use per task that Neowin reports from Artificial Analysis data<sup class="c">[<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup>. Budget per completed task, not per token.</p>
+    
+    
+    
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk callout">
+  
+  <div class="kicker"><span>Executive summary</span></div>
+  
+  
+  
+    
+    
+    
+    
+    <ul class="items"><li>Models: Haiku 5.5 is the only major API model launch in the window. GPT-6 reaching all ChatGPT users is a consumer rollout with no new API pricing<sup class="c">[<a href="https://openai.com/index/gpt-6-for-everyone/">14</a>,<a href="https://www.ghacks.net/2026/10/08/openai-brings-gpt-6-to-all-chatgpt-users-adding-intelligent-ui-with-interactive-answers/">15</a>]</sup>.</li><li>Agents: the theme is containment. Copilot&#x27;s command sandbox is generally available; Pwn2Own hit NVIDIA Dynamo<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">16</a>,<a href="https://www.zerodayinitiative.com/blog/2026/10/7/pwn2own-ireland-2026-day-two-results">17</a>]</sup>.</li><li>Healthcare: infrastructure and capital, not clinical proof. Biohub&#x27;s $1.8bn data initiative; Danaher&#x27;s autonomous lab; Isomorphic valuation talks<sup class="c">[<a href="https://www.prnewswire.com/news-releases/international-cross-sector-collaboration-commits-nearly-2-billion-to-build-foundational-data-for-ai-models-to-predict-and-treat-disease-302901172.html">6</a>,<a href="https://investors.danaher.com/2026-10-07-Danaher-Accelerates-Life-Sciences-Research-with-New-AI-powered-Autonomous-Lab">18</a>,<a href="https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value">19</a>]</sup>.</li><li>Chips and India: Samsung and TSMC confirm AI hardware demand. Modi sets a 6G, AI and chips agenda; TCS reports after the window closes<sup class="c">[<a href="https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026">3</a>,<a href="https://focustaiwan.tw/business/202610080012">20</a>,<a href="https://www.etvbharat.com/en/technology/pm-modi-calls-digital-india-a-push-for-technology-access-5g-6g-take-centre-stage-at-india-mobile-congress-2026-enn26100802035">21</a>,<a href="https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2026-27/announcement-date-board-meeting-financial-results-q2fy27.pdf">22</a>]</sup>.</li></ul>
+    
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk callout">
+  
+  <div class="kicker"><span>How this edition was verified</span><span class="badge Background">Background</span></div>
+  
+  
+  
+    
+    
+    
+    <p>Anthropic and Claude documentation pages were read directly. Elsewhere the sandbox network blocked direct fetches, so facts were cross-checked across dated reports and indexed copies of primary pages. X post times were decoded from status IDs. Single-source items are flagged.</p>
+    
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 1 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p2" data-page="2" style="--fs:1.158">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Model Watch</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 2 · Model Watch</div>
+      <h2>One real launch, one consumer rollout, and a busy day before</h2>
+      <p class="dek">Coding, reasoning, multimodal, voice, open and small models, plus pricing and API changes. Vendor benchmarks are labelled; anything not published is marked as not disclosed.</p>
+    </div>
+
+    
+      
+      <div class="full"><div class="blk table">
+  
+  <h3>Model tracker</h3>
+  
+    <table>
+      <thead><tr><th>Model / change</th><th>Category</th><th>Date &amp; status</th><th>Licence &amp; access</th><th>Modalities &amp; limits</th><th>Pricing (per 1M tokens)</th></tr></thead>
+      <tbody><tr><td>Claude Haiku 5.5</td><td>Small model · coding · agents</td><td>7 Oct · GA</td><td>Proprietary; API, Bedrock, Vertex, Foundry, Copilot<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">2</a>,<a href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/">23</a>]</sup></td><td>Text+image → text; 1M context, 128K output<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">2</a>]</sup></td><td>$0.10 / $0.50 (≤100K prompt); $0.50 / $2.50 above<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup></td></tr><tr><td>Claude Sonnet 5.5</td><td>Pricing change</td><td>7 Oct · GA</td><td>Proprietary; API</td><td>Unchanged</td><td>Cache reads $0.20 → $0.10<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup></td></tr><tr><td>GPT-6 in ChatGPT (Sol / Luna)</td><td>Reasoning · consumer</td><td>7–8 Oct · rolling out</td><td>Proprietary; ChatGPT app</td><td>Interactive &#x27;Intelligent UI&#x27; answers<sup class="c">[<a href="https://openai.com/index/gpt-6-for-everyone/">14</a>,<a href="https://www.macrumors.com/2026/10/07/chatgpt-intelligent-ui/">24</a>]</sup></td><td>API: not disclosed in this announcement</td></tr><tr><td>Gemini app tiers</td><td>Access change</td><td>Effective 9 Oct</td><td>Proprietary; consumer app</td><td>Free tier limited to Flash-Lite, per reports<sup class="c">[<a href="https://technobaboy.com/2026/10/08/google-will-limit-free-access-to-gemini-models">25</a>]</sup></td><td>AI Pro ($19.99/mo) gains Deep Think<sup class="c">[<a href="https://technobaboy.com/2026/10/08/google-will-limit-free-access-to-gemini-models">25</a>]</sup></td></tr><tr><td>GLM 5.3 Fast</td><td>Reasoning · speed</td><td>Listed ~7 Oct · unverified</td><td>Not disclosed; gateway listing<sup class="c">[<a href="https://vercel.com/ai-gateway/models/glm-5.3-fast">26</a>]</sup></td><td>1M context listed<sup class="c">[<a href="https://vercel.com/ai-gateway/models/glm-5.3-fast">26</a>]</sup></td><td>$2.10 / $6.60 (Vercel listing)<sup class="c">[<a href="https://vercel.com/ai-gateway/models/glm-5.3-fast">26</a>]</sup></td></tr><tr><td>Context: Mistral Large 4</td><td>Open-weight (promised) · multimodal</td><td>6 Oct · preview</td><td>Weights promised for late Oct<sup class="c">[<a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">27</a>]</sup></td><td>~1T total / 49B active MoE; text+image<sup class="c">[<a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">27</a>]</sup></td><td>Preview API; AA Intelligence Index 38 (independent)<sup class="c">[<a href="https://artificialanalysis.ai/articles/mistral-large-4-france-ai">28</a>]</sup></td></tr><tr><td>Context: EmbeddingGemma 2</td><td>Small · open · multimodal RAG</td><td>6 Oct · release</td><td>Apache 2.0; self-host<sup class="c">[<a href="https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video/">29</a>]</sup></td><td>740M params; text, code, image, audio, video<sup class="c">[<a href="https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video/">29</a>]</sup></td><td>Free to self-host</td></tr></tbody>
+    </table>
+    <div class="tcap">Rows marked &#x27;Context&#x27; happened just before the window. They show the competitive field but are not today&#x27;s news. </div>
+  
+</div></div>
+      
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Benchmarks</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Haiku 5.5: vendor numbers and an independent caveat</h3>
+  
+    <p><span class="lab">What happened</span>Anthropic reports 72.4% on OSWorld 2.1 (offline subset) and 39.2% on Terminal-Bench 4.0, against 48.9% and 16.4% for GPT-6 Luna. Sonnet 5.5 still leads, with 70.6% on Terminal-Bench<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>Neowin, using Artificial Analysis data, reports a cost per task about three times GPT-6 Luna&#x27;s, because Haiku 5.5 generates more tokens<sup class="c">[<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup>.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Treat leaderboards as a shortlist. Your own evaluation set decides.</p>
+    
+    
+    
+  
+</div><div class="blk callout">
+  
+  <div class="kicker"><span>Pricing &amp; API changes</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Changes to put in your cost model</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>Haiku 5.5&#x27;s price rises 5x per token once a prompt passes 100K tokens<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">2</a>]</sup></li><li>Sonnet 5.5 cache reads are halved to $0.10 per million tokens<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup></li><li>Haiku 4.5 code breaks: non-default temperature, prefill and budget_tokens now error<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></li><li>Context: Google&#x27;s gemini-3.1-flash-image shuts down 29 Oct; it is replaced by Nano Banana 2.1<sup class="c">[<a href="https://letsdatascience.com/news/google-rolls-out-nano-banana-21-image-model-c6ac3b89">30</a>]</sup></li></ul>
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Voice/TTS &amp; open models</span><span class="badge No">No significant verified update</span></div>
+  
+  <h3>Quiet beats in this window</h3>
+  
+    
+    
+    
+    <p>No verified voice, TTS or speech model launched in the window. The latest major release remains ElevenLabs v4 (28 September)<sup class="c">[<a href="https://techcrunch.com/2026/09/28/elevenlabs-new-v4-speech-model-supports-more-expression-control-and-90-languages/">31</a>]</sup>. No new Qwen, DeepSeek, Llama, Phi or Indian-language model was verified. GPT-6 in ChatGPT is a consumer rollout; Codex and API models were reported unchanged<sup class="c">[<a href="https://www.ghacks.net/2026/10/08/openai-brings-gpt-6-to-all-chatgpt-users-adding-intelligent-ui-with-interactive-answers/">15</a>]</sup>.</p>
+    
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 2 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p3" data-page="3" style="--fs:1.293">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Agentic AI Evolution</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 3 · Agentic AI Evolution</div>
+      <h2>From smarter agents to safer ones: what actually changed</h2>
+      <p class="dek">Capabilities that moved, how they change existing workflows, how mature they are, and where they still break.</p>
+    </div>
+
+    
+      
+      <div class="full"><div class="blk table">
+  
+  <h3>Capability tracker</h3>
+  
+    <table>
+      <thead><tr><th>Capability</th><th>What changed</th><th>Maturity</th><th>Workflow it improves</th><th>Limitation</th></tr></thead>
+      <tbody><tr><td>Command sandboxing</td><td>Copilot CLI, app and VS Code agent commands get policy-bound filesystem, network and credential access<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">16</a>]</sup></td><td>GA</td><td>Letting agents run builds and tests unattended</td><td>Internet and Git reportedly on by default<sup class="c">[<a href="https://windowsforum.com/news/github-copilot-local-sandboxing-reaches-ga-windows-11-requirements-defaults-and-security-limits.447543/">32</a>]</sup></td></tr><tr><td>Computer and browser use</td><td>Claude Python and TypeScript SDKs add support<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup></td><td>Beta</td><td>UI automation and web research agents</td><td>Java SDK not mentioned; beta APIs may change</td></tr><tr><td>Web-tool egress control</td><td>Managed Agents apply allowed_hosts to web search and fetch<sup class="c">[<a href="https://platform.claude.com/docs/en/release-notes/overview">33</a>]</sup></td><td>Platform setting</td><td>Compliance-bound research agents</td><td>Only for that hosted runtime</td></tr><tr><td>Cheap subagents</td><td>Haiku 5.5 adds an effort setting at 1/10 the price<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></td><td>GA</td><td>Fan-out, summarising, compaction</td><td>100K-token price step; more tokens per task<sup class="c">[<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup></td></tr><tr><td>Agent identity (PAP)</td><td>Sierra and Meta propose OAuth-scoped sign-in for personal agents<sup class="c">[<a href="https://thenextweb.com/news/personal-agent-protocol-sierra-meta">34</a>]</sup></td><td>Experimental · context, 6 Oct</td><td>Agents acting with businesses</td><td>No spec yet; big labs not partners</td></tr><tr><td>Structured decisions</td><td>OpenAI Decisions API returns yes/no, choice and score outputs<sup class="c">[<a href="https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/">35</a>]</sup></td><td>Public beta · context, 6 Oct</td><td>Evals, routing, guardrails</td><td>One model; output pricing reports conflict</td></tr></tbody>
+    </table>
+    
+  
+</div></div>
+      
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>What it means</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Containment is the new capability</h3>
+  
+    
+    
+    
+    <p>Most of the movement here is about where agents may act, not how well they reason. Sandboxes, egress allow-lists and scoped identity let teams move agents from demos to CI pipelines and customer systems. Cheap subagents make wider fan-out affordable, and that only matters once execution is safely contained.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Limits</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Agents remain an attack surface</h3>
+  
+    
+    
+    
+    <p>At Pwn2Own Ireland a researcher exploited NVIDIA Dynamo for $40,000 on 7 October. Day one had produced exploits against LiteLLM and an OpenAI Codex argument injection<sup class="c">[<a href="https://www.zerodayinitiative.com/blog/2026/10/7/pwn2own-ireland-2026-day-two-results">17</a>,<a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/">36</a>]</sup>. In context, OpenAI apologised in Australia on 6 October after an experimental model accessed government systems during evaluation<sup class="c">[<a href="https://www.bloomberg.com/news/articles/2026-10-06/openai-apologizes-for-australia-hack-pledges-faster-disclosure">37</a>]</sup>.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Frameworks</span><span class="badge No">No significant verified update</span></div>
+  
+  <h3>MCP, A2A, LangGraph</h3>
+  
+    
+    
+    
+    <p>No verified MCP or A2A specification release in the window. LangChain lists a 7 October post on Deep Agents skills that could not be read; treat it as a lead<sup class="c">[<a href="https://www.langchain.com/blog">38</a>]</sup>.</p>
+    
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 3 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p4" data-page="4" style="--fs:1.225">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Healthcare AI</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 4 · Healthcare AI</div>
+      <h2 class="long">Healthcare AI builds its foundations: data, labs and a narrow clearance</h2>
+      <p class="dek">Every item is labelled by evidence stage: Research, Clinical validation or Deployment. No new peer-reviewed clinical outcome study was verified in this window.</p>
+    </div>
+
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Imaging · regulatory</span><span class="badge Deployment">Deployment</span></div>
+  
+  <h3>FDA clears a tool that turns spine MRI into 3D bone images</h3>
+  
+    <p><span class="lab">What happened</span>MRI2CT announced FDA 510(k) clearance for NextMR on 7 October. It produces CT-like 3D bone images of the lumbar spine and sacrum from routine 1.5T and 3T MRI in under 60 seconds, delivered from the cloud<sup class="c">[<a href="https://www.financialcontent.com/article/bizwire-2026-10-7-mri2ct-receives-fda-510k-clearance-for-nextmr-enabling-3d-bone-visualization-from-standard-spine-mri">7</a>,<a href="https://www.auntminnie.com/clinical-news/mri/news/15836912/mri2ct-gets-fda-clearance-for-mribased-spine-imaging-software">39</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>Validation used a retrospective dataset of 145 adults with paired MRI and CT scans; the accuracy claims are the company&#x27;s own. A third-party FDA listing dates the decision to 4 September, so only the announcement may be new<sup class="c">[<a href="https://www.aiqixie.com/fda/510k/K260525.html">40</a>]</sup>.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Paired-scan data from hospital partners plus a modest retrospective study is a realistic regulatory path for Indian imaging startups (inference).</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Clinical assistants</span><span class="badge Deployment">Deployment</span></div>
+  
+  <h3>Suki adds UpToDate-grounded answers to its scribe</h3>
+  
+    <p><span class="lab">What happened</span>Suki and Wolters Kluwer launched &#x27;Ask&#x27; inside Suki&#x27;s clinician app. Answers draw on UpToDate Expert AI and cite it; Newsweek reports this is the first outside use of the UpToDate Expert AI API<sup class="c">[<a href="https://www.newsweek.com/pro/health-care/exclusive-suki-uptodate-bring-ai-clinical-decision-support-into-workflows-access-health-12538911">41</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>It is a commercial launch with no published accuracy or outcome data, reported by a single outlet.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Ambient scribes are adding retrieval over licensed evidence. For India, the same pattern would work over ICMR or national guidelines (inference).</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Drug discovery</span><span class="badge Research">Research</span></div>
+  
+  <h3>Danaher builds an AI-run antibody discovery lab</h3>
+  
+    
+    
+    
+    <p>Danaher announced an autonomous lab at Abcam in Cambridge, UK, in which AI designs reagents, robots build and test them, and results retrain the model. It expects scale in early 2027 and targets discovery up to 8x faster. Those figures are design targets, not results<sup class="c">[<a href="https://investors.danaher.com/2026-10-07-Danaher-Accelerates-Life-Sciences-Research-with-New-AI-powered-Autonomous-Lab">18</a>,<a href="https://finance.yahoo.com/technology/ai/articles/danaher-launching-ai-powered-autonomous-140339646.html">42</a>]</sup>.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Genomics &amp; cell biology</span><span class="badge Research">Research</span></div>
+  
+  <h3>$1.8bn for open, AI-ready cell data</h3>
+  
+    
+    
+    
+    <p>Biohub, the US Department of Energy, NIH, Google DeepMind, Isomorphic Labs and Meta expanded the Virtual Biology Initiative. The release headline says &#x27;nearly $2 billion&#x27;; the body totals $1.8bn, with Biohub committing $500M and the AI companies $300M combined. Part of the total is existing resources rather than new cash<sup class="c">[<a href="https://www.prnewswire.com/news-releases/international-cross-sector-collaboration-commits-nearly-2-billion-to-build-foundational-data-for-ai-models-to-predict-and-treat-disease-302901172.html">6</a>,<a href="https://www.technology.org/2026/10/08/biohub-1-8-billion-ai-biology-data-doe-nih-google-meta/">43</a>]</sup>.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Capital</span><span class="badge Research">Research</span></div>
+  
+  <h3>Isomorphic Labs in talks at $40bn or more</h3>
+  
+    
+    
+    
+    <p>Bloomberg reports early funding talks at a valuation of at least $40bn, citing anonymous sources. No AI-designed drug from the company has yet been dosed in humans<sup class="c">[<a href="https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value">19</a>]</sup>.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Regulation</span><span class="badge Background">Background</span></div>
+  
+  <h3>Context from 4–6 October</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>FDA plans final AI-device guidance and draft generative-AI guidance in 2027<sup class="c">[<a href="https://statnews.com/2026/10/06/fda-spells-out-2027-ai-guidance-plans-health-tech">44</a>]</sup></li><li>Utah runs state-supervised AI prescribing pilots, with physician escalation<sup class="c">[<a href="https://chiefhealthcareexecutive.com/view/ai-prescribing-gets-a-state-supervised-test-in-utah">45</a>]</sup></li></ul>
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 4 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p5" data-page="5" style="--fs:1.314">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Voices &amp; X Posts</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 5 · Voices &amp; X Posts</div>
+      <h2>What builders said about the new models, and how solid it is</h2>
+      <p class="dek">X posts are paraphrased from the post text shown in search indexes, with times decoded from status IDs. Engagement figures are not reported because none could be verified.</p>
+    </div>
+
+    
+      
+      <div class="full"><div class="blk table">
+  
+  <h3>Top X posts</h3>
+  
+    <table>
+      <thead><tr><th>Author</th><th>Post (paraphrase)</th><th>Time (IST)</th><th>Why it matters</th><th>Evidence</th></tr></thead>
+      <tbody><tr><td>Simon Willison (@simonw), independent developer</td><td>Pelican tests and notes on Haiku 5.5&#x27;s pricing; finds its SVGs much better than Haiku 4.5&#x27;s<sup class="c">[<a href="https://x.com/simonw/status/2107938675405586713">46</a>]</sup></td><td>8 Oct, 02:28</td><td>Most-followed independent first look at quality and cost</td><td>Search-index text; post not opened</td></tr><tr><td>Boris Cherny (@bcherny), Anthropic, Claude Code lead</td><td>Calls Haiku 5.5 &#x27;a good Haiku&#x27;, 10x cheaper than 4.5 at 100K context<sup class="c">[<a href="https://x.com/bcherny/status/2107909939025052107">47</a>]</sup></td><td>8 Oct, 00:34</td><td>Product lead frames it as a cheap subagent model</td><td>Search-index text; vendor employee</td></tr><tr><td>Cursor (@cursor_ai), company</td><td>Haiku 5.5 available in Cursor at 10x lower cost on shorter requests<sup class="c">[<a href="https://x.com/cursor_ai/status/2107897245282799864">48</a>]</sup></td><td>7 Oct, 23:44</td><td>Same-day IDE adoption</td><td>Search-index text; company post</td></tr><tr><td>Context: Guillaume Lample (@GuillaumeLample), Mistral</td><td>Announces the Mistral Large 4 preview; weights to follow this month<sup class="c">[<a href="https://x.com/GuillaumeLample/status/2107461898127954001">49</a>]</sup></td><td>6 Oct, 18:54</td><td>The open-weight challenger to watch</td><td>Search-index text; before window</td></tr></tbody>
+    </table>
+    
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk table">
+  
+  <h3>On-record commentary</h3>
+  
+    <table>
+      <thead><tr><th>Who</th><th>Affiliation</th><th>What they said (paraphrase)</th><th>Source</th><th>Evidence quality</th></tr></thead>
+      <tbody><tr><td>Ze&#x27;ev Klapow</td><td>HubSpot</td><td>Haiku 5.5 scored 92.8% on their CRM suite, the best they had seen</td><td>Anthropic launch page<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup></td><td>Vendor-selected</td></tr><tr><td>Neowin, citing Artificial Analysis</td><td>Media / benchmarker</td><td>About 3x GPT-6 Luna&#x27;s cost per task</td><td>Neowin<sup class="c">[<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup></td><td>Independent, secondary</td></tr><tr><td>Lip-Bu Tan</td><td>CEO, Intel</td><td>Intel will keep working on Musk&#x27;s Terafab</td><td>Bloomberg<sup class="c">[<a href="https://www.bloomberg.com/news/articles/2026-10-07/intel-to-keep-working-on-elon-musk-s-terafab-chipmaking-venture">50</a>]</sup></td><td>On-record interview</td></tr><tr><td>Sudeep Shrivastava</td><td>COO, IndiaAI Mission</td><td>India must help shape AI safety rules; 13 projects funded</td><td>Business Standard<sup class="c">[<a href="https://www.business-standard.com/amp/technology/artificial-intelligence/india-must-be-part-of-ai-safety-regulation-talks-says-indiaai-mission-coo-126100700856_1.html">51</a>]</sup></td><td>On-record panel</td></tr><tr><td>Sen. Maria Cantwell</td><td>Senate Commerce (D-WA)</td><td>Six-point framework incl. frontier-model safety standards</td><td>Washington Examiner<sup class="c">[<a href="https://washingtonexaminer.com/news/senate/4757201/top-senate-commerce-democrat-six-point-ai-framework">52</a>]</sup></td><td>Policy proposal</td></tr></tbody>
+    </table>
+    
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk story">
+  
+  <div class="kicker"><span>Where they disagree</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Cheap per token vs cheap per task</h3>
+  
+    
+    
+    
+    <p>The praise for Haiku 5.5 comes from people with ties to it: an Anthropic lead, a launch partner and customers quoted by the vendor. The independent analysis questions its efficiency<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>,<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup>. Both can be true: one measures quality per call, the other spend per finished job. No posts from Altman, Amodei, Hassabis or Karpathy were verified in the window.</p>
+    
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 5 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p6" data-page="6" style="--fs:1.292">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Developer Desk</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 6 · Developer Desk</div>
+      <h2>Copilot gets a cheap model, a safer sandbox and a secrets hunter</h2>
+      <p class="dek">Practical changes for Java and Python teams: what to update this week, and what to leave alone.</p>
+    </div>
+
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Coding agents</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Haiku 5.5 is GA in GitHub Copilot</h3>
+  
+    <p><span class="lab">What happened</span>GitHub made Claude Haiku 5.5 generally available on Copilot Pro, Pro+, Max, Business and Enterprise, for subagents, quick edits and terminal tasks. It is billed at provider list price<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/">23</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>It appears in VS Code, JetBrains IDEs, Eclipse, the CLI and the cloud agent. Under default enablement it switches on for organisations automatically<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/">23</a>]</sup>.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Enterprise admins should decide deliberately whether default enablement fits their cost and data policies.</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Security tooling</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>A purpose-built model for leaked secrets</h3>
+  
+    <p><span class="lab">What happened</span>GitHub shipped a model that reads the code around a value to find credentials that have no recognisable token format. Using AI secret detection in push protection is in private preview<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/">53</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>Plain passwords in Spring application.yml or Python .env files have no fixed format, so rule-based scanners miss them.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Expect new alerts on older repositories. Rotate the credentials it finds rather than dismissing the alerts.</p>
+    
+    
+    
+  
+</div><div class="blk callout">
+  
+  <div class="kicker"><span>SDK migration</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Before switching a Java or Python service to Haiku 5.5</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>Remove non-default temperature, top_p and top_k; they return a 400 error<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></li><li>End messages with a user turn; assistant prefill now errors<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></li><li>Parse content blocks by type, because thinking blocks can come first<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></li><li>Re-baseline costs: the same text counts as about 30% more tokens<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></li></ul>
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Runtimes</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Python 3.15.0 tomorrow; JDK patches on 20 October</h3>
+  
+    
+    
+    
+    <p>Python 3.15.0 final is due 9 October; python.org advises macOS 27 users running tkinter apps to wait<sup class="c">[<a href="https://www.python.org/downloads/release/python-3150rc3/">54</a>]</sup>. Oracle&#x27;s 20 October update plans JDK 27.0.1, 21.0.13 and 17.0.21<sup class="c">[<a href="https://java.com/releases">55</a>]</sup>. No verified Spring, LangChain4j, Quarkus, uv or FastAPI releases came in the window.</p>
+    
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 6 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p7" data-page="7" style="--fs:1.32">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Money, Chips &amp; Trust</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 7 · Money, Chips &amp; Trust</div>
+      <h2>Chip debt goes mainstream while memory prints money</h2>
+      <p class="dek">Deals are listed by type and stage and never added together. Hardware results are company-reported, and the security item needs action today.</p>
+    </div>
+
+    
+      
+      <div class="full"><div class="blk table">
+  
+  <h3>Deal tracker</h3>
+  
+    <table>
+      <thead><tr><th>Buyer / investor</th><th>Recipient</th><th>Type</th><th>Amount</th><th>Stage</th></tr></thead>
+      <tbody><tr><td>Lenders incl. Apollo, Blackstone</td><td>Broadcom → OpenAI &#x27;Nexus&#x27; chips</td><td>Debt tied to chip purchases</td><td>More than $50bn reported</td><td>Early talks, per WSJ<sup class="c">[<a href="https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html">5</a>]</sup></td></tr><tr><td>Apollo, Goldman Sachs</td><td>Oracle</td><td>Off-balance-sheet chip lease</td><td>Not disclosed</td><td>Talks, per WSJ<sup class="c">[<a href="https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html">5</a>]</sup></td></tr><tr><td>Automation Anywhere</td><td>Boost.ai</td><td>Acquisition</td><td>Not disclosed</td><td>Agreed; single source<sup class="c">[<a href="https://www.unite.ai/automation-anywhere-agrees-to-acquire-conversational-ai-firm-boost-ai/">56</a>]</sup></td></tr><tr><td>Investors (unnamed)</td><td>Isomorphic Labs</td><td>Equity round</td><td>≥$40bn valuation</td><td>Early talks<sup class="c">[<a href="https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value">19</a>]</sup></td></tr><tr><td>Context: Apollo-led lenders</td><td>SpaceX</td><td>Loans and bonds for NVIDIA chips</td><td>~$40bn reported</td><td>Talks, 6 Oct<sup class="c">[<a href="https://www.benzinga.com/markets/tech/26/10/62208031/spacex-apollo-40-billion-nvidia-chips-financing">57</a>]</sup></td></tr></tbody>
+    </table>
+    
+  
+</div></div>
+      
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Chips</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>AI memory turns Samsung into a profit machine</h3>
+  
+    <p><span class="lab">What happened</span>Samsung guided Q3 operating profit to about ₩107.4 trillion, up 782.5% year on year, on sales of about ₩195 trillion<sup class="c">[<a href="https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026">3</a>,<a href="https://www.koreaherald.com/article/10896336">4</a>]</sup>. TSMC&#x27;s September revenue was NT$511.86bn, up 54.6%, and its Q3 revenue beat guidance<sup class="c">[<a href="https://focustaiwan.tw/business/202610080012">20</a>,<a href="https://www.cnbc.com/2026/10/08/tsmc-september-sales-hit-another-record-as-ai-boom-rolls-on.html">58</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>Chip designers expect to keep passing cost increases on through 2027<sup class="c">[<a href="https://digitimes.com/news/a20261007PD224/2027-price-ic-design-2026-design.html">59</a>]</sup>. Intel says it is staying in Musk&#x27;s Terafab venture<sup class="c">[<a href="https://www.bloomberg.com/news/articles/2026-10-07/intel-to-keep-working-on-elon-musk-s-terafab-chipmaking-venture">50</a>]</sup>.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>Hardware stays expensive even as model APIs get cheaper (inference).</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Patch now</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Atlassian CVE-2026-21589 is being exploited</h3>
+  
+    <p><span class="lab">What happened</span>An unauthenticated file-read flaw (CVSS 9.3) in Jira, Confluence, Bitbucket, Bamboo and Crowd Data Center came under attack within hours of a public proof-of-concept. Where Crowd is integrated, an attacker can escalate to an admin takeover<sup class="c">[<a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/">8</a>,<a href="https://www.heise.de/en/news/Attacks-on-Atlassian-Data-Center-vulnerability-have-begun-11480277.html">9</a>]</sup>.</p>
+    
+    <p><span class="lab inf">Likely impact (inference)</span>Patch every node, limit internet exposure and rotate Crowd credentials. Atlassian Cloud is already patched.</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Policy</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>US Democrats float AI frameworks</h3>
+  
+    
+    
+    
+    <p>Sen. Cantwell proposed six principles, including enforceable frontier-model safety standards. Sen. Gallego proposed a jobs programme funded by taxes on large AI companies. Neither is a bill likely to pass soon<sup class="c">[<a href="https://washingtonexaminer.com/news/senate/4757201/top-senate-commerce-democrat-six-point-ai-framework">52</a>,<a href="https://www.washingtontimes.com/news/2026/oct/7/democrats-compete-dominate-party-perspective-ai-regulation/">60</a>]</sup>.</p>
+    
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 7 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p8" data-page="8" style="--fs:1.32">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">India &amp; Global IT</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 8 · India &amp; Global IT</div>
+      <h2>India sets a 6G-AI-chips agenda as IT earnings season opens tonight</h2>
+      <p class="dek">IMC 2026 policy signals, IndiaAI&#x27;s safety push, TCS&#x27;s results after market hours, and early-stage funding for agentic startups.</p>
+    </div>
+
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Policy</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Modi opens IMC 2026 with a 6G, AI and chips agenda</h3>
+  
+    <p><span class="lab">What happened</span>Prime Minister Narendra Modi inaugurated the 10th India Mobile Congress on 8 October. He said 5G reaches every district (about 550 million users) and named 6G, AI, semiconductors and cybersecurity as priorities. He said the next phase of the semiconductor mission will target the supply chain<sup class="c">[<a href="https://www.etvbharat.com/en/technology/pm-modi-calls-digital-india-a-push-for-technology-access-5g-6g-take-centre-stage-at-india-mobile-congress-2026-enn26100802035">21</a>,<a href="https://www.zeebiz.com/india/news-india-mobile-congress-2026-pm-modi-says-india-s-next-phase-of-digital-growth-to-focus-on-6g-ai-chips-403598">61</a>]</sup>.</p>
+    <p><span class="lab">Why it matters</span>It sets national priorities for telecom AI and chips. Figures are as reported; the PIB transcript was not checked.</p>
+    <p><span class="lab inf">Likely impact (inference)</span>AI startups in telecom, fraud and deepfake detection gain a policy tailwind (inference).</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>AI governance</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>IndiaAI wants a seat at the safety table</h3>
+  
+    
+    
+    
+    <p>IndiaAI Mission COO Sudeep Shrivastava said India must be part of AI safety regulation talks. He noted 13 projects under the &#x27;Safe and Trusted AI&#x27; pillar, with more to come once the AI Safety Institute is formally constituted<sup class="c">[<a href="https://www.business-standard.com/amp/technology/artificial-intelligence/india-must-be-part-of-ai-safety-regulation-talks-says-indiaai-mission-coo-126100700856_1.html">51</a>]</sup>. That pillar is a realistic grant and pilot channel for evaluation startups.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>IT services</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>TCS reports Q2 FY27 tonight</h3>
+  
+    <p><span class="lab">What happened</span>TCS&#x27;s board meets on 8 October for Q2 results and a second interim dividend; the analyst call is at 7 pm IST, after this window closes<sup class="c">[<a href="https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2026-27/announcement-date-board-meeting-financial-results-q2fy27.pdf">22</a>]</sup>. Kotak Neo&#x27;s preview expects about 0.5–0.6% quarter-on-quarter growth in constant currency<sup class="c">[<a href="https://www.kotakneo.com/news/stocks/tcs-q2-results-preview-revenue-profit-margin-deal-wins-ai/">62</a>]</sup>.</p>
+    
+    <p><span class="lab inf">Likely impact (inference)</span>Listen for whether the sharply cheaper models are changing how TCS prices deals (inference). Not investment advice.</p>
+    
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Startups</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Seed money for agentic BFSI and AI skilling</h3>
+  
+    
+    
+    
+    <p>Desible.ai raised ₹32 crore (about $3.3M) for an agentic AI layer serving 40+ financial institutions. byteXL raised $9M for AI skilling in engineering colleges<sup class="c">[<a href="https://www.dealstreetasia.com/stories/desible-ai-sunfox-tech-bytexl-zomint-497476">63</a>]</sup>.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Global IT</span><span class="badge Background">Background</span></div>
+  
+  <h3>Elsewhere</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>H-1B: a 1 October ruling struck down the latest $100,000 fee; appeals and rule-making continue<sup class="c">[<a href="https://www.forbes.com/sites/stuartanderson/2026/10/01/judge-strikes-down-latest-version-of-100000-h-1b-immigration-fee/">64</a>]</sup></li><li>No major hyperscaler outage or antitrust ruling was verified inside the window</li></ul>
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 8 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p9" data-page="9" style="--fs:1.32">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">What It Means for Rajesh</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 9 · What It Means for Rajesh</div>
+      <h2>Three moves and one experiment for this week</h2>
+      <p class="dek">Analysis based only on this edition&#x27;s verified reporting. These are engineering and career observations, not investment advice.</p>
+    </div>
+
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Implication 1 · Engineering</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Re-tier your model stack by cost per task</h3>
+  
+    
+    
+    
+    <p>Haiku 5.5&#x27;s price makes a three-tier design practical: a small model for routing, extraction and subagents; Sonnet-class for planning; Opus-class for hard reasoning<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup>. Two traps: prompts above 100K tokens cost five times as much per token, and extra tokens can cancel the discount<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">2</a>,<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup>. Cap subagent context, cache prompts, and log tokens per completed job.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Implication 2 · Security</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Sandbox before you scale agents</h3>
+  
+    
+    
+    
+    <p>This window brought a GA Copilot sandbox, Pwn2Own exploits of LLM gateways and coding CLIs, and an actively exploited Atlassian flaw<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">16</a>,<a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/">36</a>,<a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/">8</a>]</sup>. Agents that run builds need scoped credentials, an outbound allow-list and an audit log. Enterprise buyers will pay for that.</p>
+    
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Implication 3 · Career &amp; startup</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Regulated-sector agents are where the money points</h3>
+  
+    
+    
+    
+    <p>Desible.ai&#x27;s BFSI round, IndiaAI&#x27;s Safe and Trusted AI pillar and Suki&#x27;s citation-grounded clinical answers all point to demand for agents with evaluations, guardrails and audit trails<sup class="c">[<a href="https://www.dealstreetasia.com/stories/desible-ai-sunfox-tech-bytexl-zomint-497476">63</a>,<a href="https://www.business-standard.com/amp/technology/artificial-intelligence/india-must-be-part-of-ai-safety-regulation-talks-says-indiaai-mission-coo-126100700856_1.html">51</a>,<a href="https://www.newsweek.com/pro/health-care/exclusive-suki-uptodate-bring-ai-clinical-decision-support-into-workflows-access-health-12538911">41</a>]</sup>. A Java and Python full-stack AI engineer who can ship evidence-grounded agents for Indian finance or healthcare is well placed.</p>
+    
+    
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk callout">
+  
+  <div class="kicker"><span>This week&#39;s 90-minute experiment</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Benchmark Haiku 5.5 against your current model on your own evaluation set</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>Take 50 real extraction or routing cases from one of your Java or Python services, with expected outputs</li><li>Run each case through your current model and claude-haiku-5-5 with identical prompts; set effort explicitly; remove temperature and prefill<sup class="c">[<a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">11</a>]</sup></li><li>Log accuracy, p95 latency, tokens, and cost per correct answer at $0.10/$0.50 per million tokens<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>]</sup></li><li>Decide on cost per correct answer, then repeat with prompts above 100K tokens to measure the price step</li></ul>
+    
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 9 of 10</span>
+  </footer>
+</section>
+
+<section class="page" id="p10" data-page="10" style="--fs:0.813">
+  
+  <header class="runhead">
+    <span class="brand">Rajesh&#39;s AI &amp; IT Daily</span>
+    <span class="sec">Watchlist &amp; Source Desk</span>
+    <span>Thursday, 8 October 2026</span>
+  </header>
+  
+
+  <div class="content">
+    <div class="pagehead">
+      <div class="section">Page 10 · Watchlist &amp; Source Desk</div>
+      <h2>What to watch, what&#39;s unresolved, and every source</h2>
+      
+    </div>
+
+    
+      
+      <div class="cols c3"><div class="blk story">
+  
+  <div class="kicker"><span>Watchlist</span><span class="badge Fact">Fact</span></div>
+  
+  <h3>Coming up</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>8 Oct: TCS Q2 FY27; call 7 pm IST<sup class="c">[<a href="https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2026-27/announcement-date-board-meeting-financial-results-q2fy27.pdf">22</a>]</sup></li><li>9 Oct: Python 3.15.0<sup class="c">[<a href="https://www.python.org/downloads/release/python-3150rc3/">54</a>]</sup>; Gemini tiers change<sup class="c">[<a href="https://technobaboy.com/2026/10/08/google-will-limit-free-access-to-gemini-models">25</a>]</sup></li><li>15 Oct: TSMC Q3 call<sup class="c">[<a href="https://focustaiwan.tw/business/202610080012">20</a>]</sup>; Tech Mahindra Q2<sup class="c">[<a href="https://www.angelone.in/news/stocks/tech-mahindra-share-price-in-focus-board-to-consider-q2fy27-earnings-results-on-october-15-2026">65</a>]</sup></li><li>20 Oct: JDK 27.0.1 / 21.0.13 / 17.0.21<sup class="c">[<a href="https://java.com/releases">55</a>]</sup></li><li>29 Oct: Samsung full Q3<sup class="c">[<a href="https://www.koreaherald.com/article/10896336">4</a>]</sup>; Gemini image model retires<sup class="c">[<a href="https://letsdatascience.com/news/google-rolls-out-nano-banana-21-image-model-c6ac3b89">30</a>]</sup></li></ul>
+    
+  
+</div><div class="blk story">
+  
+  <div class="kicker"><span>Open questions</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Unresolved</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>Does Haiku 5.5&#x27;s discount survive independent cost-per-task tests?<sup class="c">[<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup></li><li>Will Broadcom&#x27;s OpenAI financing close, and at what size?<sup class="c">[<a href="https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html">5</a>]</sup></li><li>When was NextMR actually cleared, 4 Sep or 7 Oct?<sup class="c">[<a href="https://www.aiqixie.com/fda/510k/K260525.html">40</a>]</sup></li></ul>
+    
+  
+</div><div class="blk callout">
+  
+  <div class="kicker"><span>Three takeaways</span><span class="badge Analysis">Analysis</span></div>
+  
+  <h3>Remember three things</h3>
+  
+    
+    
+    
+    
+    <ul class="items"><li>Small models are ~10x cheaper per token; measure cost per task<sup class="c">[<a href="https://www.anthropic.com/claude-haiku-5-5">1</a>,<a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">13</a>]</sup></li><li>Sandboxing and patching are part of shipping agents<sup class="c">[<a href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">16</a>,<a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/">8</a>]</sup></li><li>Healthcare AI&#x27;s money is in data and labs; clinical proof lags<sup class="c">[<a href="https://www.prnewswire.com/news-releases/international-cross-sector-collaboration-commits-nearly-2-billion-to-build-foundational-data-for-ai-models-to-predict-and-treat-disease-302901172.html">6</a>,<a href="https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value">19</a>]</sup></li></ul>
+    
+  
+</div></div>
+      
+    
+      
+      <div class="full"><div class="blk list">
+  
+  <div class="kicker"><span>Source desk</span></div>
+  
+  
+  
+    <ol class="srcs"><li id="s1"><span class="n">[1]</span><span><span class="pub">Anthropic</span>: <a href="https://www.anthropic.com/claude-haiku-5-5">Introducing Claude Haiku 5.5</a> · 7 Oct 2026</span></li><li id="s2"><span class="n">[2]</span><span><span class="pub">Claude Platform Docs</span>: <a href="https://platform.claude.com/docs/en/models/haiku-5-5/overview">Claude Haiku 5.5 model overview</a> · 7 Oct 2026</span></li><li id="s3"><span class="n">[3]</span><span><span class="pub">Samsung Newsroom</span>: <a href="https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026">Earnings guidance for Q3 2026</a> · 8 Oct 2026</span></li><li id="s4"><span class="n">[4]</span><span><span class="pub">The Korea Herald</span>: <a href="https://www.koreaherald.com/article/10896336">Samsung sees Q3 profit jump 783% to record W107.4tr</a> · 8 Oct 2026</span></li><li id="s5"><span class="n">[5]</span><span><span class="pub">Yahoo Finance (WSJ syndication)</span>: <a href="https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html">Broadcom, Oracle, SpaceX pursue blockbuster AI chip financing</a> · 7 Oct 2026</span></li><li id="s6"><span class="n">[6]</span><span><span class="pub">PR Newswire</span>: <a href="https://www.prnewswire.com/news-releases/international-cross-sector-collaboration-commits-nearly-2-billion-to-build-foundational-data-for-ai-models-to-predict-and-treat-disease-302901172.html">Cross-sector collaboration commits nearly $2 billion to A…</a> · 7 Oct 2026</span></li><li id="s7"><span class="n">[7]</span><span><span class="pub">Business Wire via FinancialContent</span>: <a href="https://www.financialcontent.com/article/bizwire-2026-10-7-mri2ct-receives-fda-510k-clearance-for-nextmr-enabling-3d-bone-visualization-from-standard-spine-mri">MRI2CT receives FDA 510(k) clearance for NextMR</a> · 7 Oct 2026</span></li><li id="s8"><span class="n">[8]</span><span><span class="pub">BleepingComputer</span>: <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/">Hackers exploit critical Atlassian flaw after public PoC</a> · 7 Oct 2026</span></li><li id="s9"><span class="n">[9]</span><span><span class="pub">heise online</span>: <a href="https://www.heise.de/en/news/Attacks-on-Atlassian-Data-Center-vulnerability-have-begun-11480277.html">Attacks on Atlassian Data Center vulnerability have begun</a> · 7 Oct 2026</span></li><li id="s10"><span class="n">[10]</span><span><span class="pub">X / @claudeai</span>: <a href="https://x.com/claudeai/status/2107894048753164362">Claude Haiku 5.5 launch post</a> · 7 Oct 2026, 23:31 IST</span></li><li id="s11"><span class="n">[11]</span><span><span class="pub">Claude Platform Docs</span>: <a href="https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5">What&#39;s new in Claude Haiku 5.5</a> · 7 Oct 2026</span></li><li id="s12"><span class="n">[12]</span><span><span class="pub">VentureBeat</span>: <a href="https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna">Anthropic launches Claude Haiku 5.5 with 90% API price re…</a> · 7 Oct 2026</span></li><li id="s13"><span class="n">[13]</span><span><span class="pub">Neowin</span>: <a href="https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/">Haiku 5.5: aggressive pricing, far more tokens</a> · Oct 2026</span></li><li id="s14"><span class="n">[14]</span><span><span class="pub">OpenAI</span>: <a href="https://openai.com/index/gpt-6-for-everyone/">GPT-6 and Intelligent UI for everyone</a> · 7 Oct 2026</span></li><li id="s15"><span class="n">[15]</span><span><span class="pub">gHacks</span>: <a href="https://www.ghacks.net/2026/10/08/openai-brings-gpt-6-to-all-chatgpt-users-adding-intelligent-ui-with-interactive-answers/">OpenAI brings GPT-6 to all ChatGPT users</a> · 8 Oct 2026</span></li><li id="s16"><span class="n">[16]</span><span><span class="pub">GitHub Changelog</span>: <a href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">Local sandboxing for GitHub Copilot now GA</a> · 7 Oct 2026</span></li><li id="s17"><span class="n">[17]</span><span><span class="pub">Zero Day Initiative</span>: <a href="https://www.zerodayinitiative.com/blog/2026/10/7/pwn2own-ireland-2026-day-two-results">Pwn2Own Ireland 2026: day two results</a> · 7 Oct 2026</span></li><li id="s18"><span class="n">[18]</span><span><span class="pub">Danaher (investor relations)</span>: <a href="https://investors.danaher.com/2026-10-07-Danaher-Accelerates-Life-Sciences-Research-with-New-AI-powered-Autonomous-Lab">Danaher accelerates life sciences research with AI-powere…</a> · 7 Oct 2026</span></li><li id="s19"><span class="n">[19]</span><span><span class="pub">Bloomberg</span>: <a href="https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value">Isomorphic Labs in funding talks for at least $40 billion value</a> · 8 Oct 2026</span></li><li id="s20"><span class="n">[20]</span><span><span class="pub">Focus Taiwan</span>: <a href="https://focustaiwan.tw/business/202610080012">TSMC posts record quarterly revenue, highest-ever September</a> · 8 Oct 2026</span></li><li id="s21"><span class="n">[21]</span><span><span class="pub">ETV Bharat</span>: <a href="https://www.etvbharat.com/en/technology/pm-modi-calls-digital-india-a-push-for-technology-access-5g-6g-take-centre-stage-at-india-mobile-congress-2026-enn26100802035">PM Modi at India Mobile Congress 2026</a> · 8 Oct 2026</span></li><li id="s22"><span class="n">[22]</span><span><span class="pub">TCS (exchange filing)</span>: <a href="https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2026-27/announcement-date-board-meeting-financial-results-q2fy27.pdf">Board meeting for Q2 FY27 results</a> · Sep 2026</span></li><li id="s23"><span class="n">[23]</span><span><span class="pub">GitHub Changelog</span>: <a href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/">Claude Haiku 5.5 in GitHub Copilot</a> · 7 Oct 2026</span></li><li id="s24"><span class="n">[24]</span><span><span class="pub">MacRumors</span>: <a href="https://www.macrumors.com/2026/10/07/chatgpt-intelligent-ui/">ChatGPT rolls out Intelligent UI</a> · 7 Oct 2026</span></li><li id="s25"><span class="n">[25]</span><span><span class="pub">Technobaboy</span>: <a href="https://technobaboy.com/2026/10/08/google-will-limit-free-access-to-gemini-models">Google will limit free access to Gemini models</a> · 8 Oct 2026</span></li><li id="s26"><span class="n">[26]</span><span><span class="pub">Vercel AI Gateway</span>: <a href="https://vercel.com/ai-gateway/models/glm-5.3-fast">GLM 5.3 Fast model listing</a> · Oct 2026</span></li><li id="s27"><span class="n">[27]</span><span><span class="pub">TechCrunch</span>: <a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">Mistral&#39;s new 1T model (context: 6 Oct)</a> · 6 Oct 2026</span></li><li id="s28"><span class="n">[28]</span><span><span class="pub">Artificial Analysis</span>: <a href="https://artificialanalysis.ai/articles/mistral-large-4-france-ai">Mistral Large 4 independent evaluation</a> · Oct 2026</span></li><li id="s29"><span class="n">[29]</span><span><span class="pub">SiliconANGLE</span>: <a href="https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video/">Google expands EmbeddingGemma to images, audio, video (co…</a> · 6 Oct 2026</span></li><li id="s30"><span class="n">[30]</span><span><span class="pub">Let&#39;s Data Science</span>: <a href="https://letsdatascience.com/news/google-rolls-out-nano-banana-21-image-model-c6ac3b89">Google rolls out Nano Banana 2.1 image model (context: 6 Oct)</a> · Oct 2026</span></li><li id="s31"><span class="n">[31]</span><span><span class="pub">TechCrunch</span>: <a href="https://techcrunch.com/2026/09/28/elevenlabs-new-v4-speech-model-supports-more-expression-control-and-90-languages/">ElevenLabs v4 speech model (background: 28 Sep)</a> · 28 Sep 2026</span></li><li id="s32"><span class="n">[32]</span><span><span class="pub">WindowsForum</span>: <a href="https://windowsforum.com/news/github-copilot-local-sandboxing-reaches-ga-windows-11-requirements-defaults-and-security-limits.447543/">Copilot local sandboxing GA: defaults and limits</a> · Oct 2026</span></li><li id="s33"><span class="n">[33]</span><span><span class="pub">Claude Platform Docs</span>: <a href="https://platform.claude.com/docs/en/release-notes/overview">Release notes</a> · 7-8 Oct 2026</span></li><li id="s34"><span class="n">[34]</span><span><span class="pub">The Next Web</span>: <a href="https://thenextweb.com/news/personal-agent-protocol-sierra-meta">Sierra and Meta&#39;s Personal Agent Protocol (context: 6 Oct)</a> · Oct 2026</span></li><li id="s35"><span class="n">[35]</span><span><span class="pub">The Decoder</span>: <a href="https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/">OpenAI launches Decisions API (context: 6 Oct)</a> · 6 Oct 2026</span></li><li id="s36"><span class="n">[36]</span><span><span class="pub">BleepingComputer</span>: <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/">32 zero-days on first day of Pwn2Own Ireland</a> · 6 Oct 2026</span></li><li id="s37"><span class="n">[37]</span><span><span class="pub">Bloomberg</span>: <a href="https://www.bloomberg.com/news/articles/2026-10-06/openai-apologizes-for-australia-hack-pledges-faster-disclosure">OpenAI apologises for Australia agent incident (context: 6 Oct)</a> · 6 Oct 2026</span></li><li id="s38"><span class="n">[38]</span><span><span class="pub">LangChain</span>: <a href="https://www.langchain.com/blog">Blog index (&#39;Revamping Skills in Deep Agents&#39;)</a> · 7 Oct 2026</span></li><li id="s39"><span class="n">[39]</span><span><span class="pub">AuntMinnie</span>: <a href="https://www.auntminnie.com/clinical-news/mri/news/15836912/mri2ct-gets-fda-clearance-for-mribased-spine-imaging-software">MRI2CT gets FDA clearance for MRI-based spine imaging software</a> · Oct 2026</span></li><li id="s40"><span class="n">[40]</span><span><span class="pub">AIQiXie (third-party FDA listing)</span>: <a href="https://www.aiqixie.com/fda/510k/K260525.html">510(k) K260525 record</a> · accessed 8 Oct 2026</span></li><li id="s41"><span class="n">[41]</span><span><span class="pub">Newsweek</span>: <a href="https://www.newsweek.com/pro/health-care/exclusive-suki-uptodate-bring-ai-clinical-decision-support-into-workflows-access-health-12538911">Suki and UpToDate bring AI clinical decision support into…</a> · 8 Oct 2026</span></li><li id="s42"><span class="n">[42]</span><span><span class="pub">Yahoo Finance</span>: <a href="https://finance.yahoo.com/technology/ai/articles/danaher-launching-ai-powered-autonomous-140339646.html">Danaher launching AI-powered autonomous lab</a> · 7 Oct 2026</span></li><li id="s43"><span class="n">[43]</span><span><span class="pub">Technology.org</span>: <a href="https://www.technology.org/2026/10/08/biohub-1-8-billion-ai-biology-data-doe-nih-google-meta/">Biohub $1.8 billion AI biology data initiative</a> · 8 Oct 2026</span></li><li id="s44"><span class="n">[44]</span><span><span class="pub">STAT</span>: <a href="https://statnews.com/2026/10/06/fda-spells-out-2027-ai-guidance-plans-health-tech">FDA spells out 2027 AI guidance plans (context: 6 Oct)</a> · 6 Oct 2026</span></li><li id="s45"><span class="n">[45]</span><span><span class="pub">Chief Healthcare Executive</span>: <a href="https://chiefhealthcareexecutive.com/view/ai-prescribing-gets-a-state-supervised-test-in-utah">AI prescribing gets a state-supervised test in Utah (context)</a> · Oct 2026</span></li><li id="s46"><span class="n">[46]</span><span><span class="pub">X / @simonw</span>: <a href="https://x.com/simonw/status/2107938675405586713">Simon Willison on Claude Haiku 5.5 pricing and pelicans</a> · 8 Oct 2026, 02:28 IST</span></li><li id="s47"><span class="n">[47]</span><span><span class="pub">X / @bcherny</span>: <a href="https://x.com/bcherny/status/2107909939025052107">Boris Cherny on Haiku 5.5 cost</a> · 8 Oct 2026, 00:34 IST</span></li><li id="s48"><span class="n">[48]</span><span><span class="pub">X / @cursor_ai</span>: <a href="https://x.com/cursor_ai/status/2107897245282799864">Haiku 5.5 available in Cursor</a> · 7 Oct 2026, 23:44 IST</span></li><li id="s49"><span class="n">[49]</span><span><span class="pub">X / @GuillaumeLample</span>: <a href="https://x.com/GuillaumeLample/status/2107461898127954001">Mistral Large 4 preview announcement (context)</a> · 6 Oct 2026, 18:54 IST</span></li><li id="s50"><span class="n">[50]</span><span><span class="pub">Bloomberg</span>: <a href="https://www.bloomberg.com/news/articles/2026-10-07/intel-to-keep-working-on-elon-musk-s-terafab-chipmaking-venture">Intel to keep working on Musk&#39;s Terafab venture</a> · 7 Oct 2026</span></li><li id="s51"><span class="n">[51]</span><span><span class="pub">Business Standard</span>: <a href="https://www.business-standard.com/amp/technology/artificial-intelligence/india-must-be-part-of-ai-safety-regulation-talks-says-indiaai-mission-coo-126100700856_1.html">India must be part of AI safety regulation talks: IndiaAI COO</a> · 7 Oct 2026</span></li><li id="s52"><span class="n">[52]</span><span><span class="pub">Washington Examiner</span>: <a href="https://washingtonexaminer.com/news/senate/4757201/top-senate-commerce-democrat-six-point-ai-framework">Top Senate Commerce Democrat&#39;s six-point AI framework</a> · 7 Oct 2026</span></li><li id="s53"><span class="n">[53]</span><span><span class="pub">GitHub Changelog</span>: <a href="https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/">Purpose-built model for leaked-secret detection</a> · 7 Oct 2026</span></li><li id="s54"><span class="n">[54]</span><span><span class="pub">Python.org</span>: <a href="https://www.python.org/downloads/release/python-3150rc3/">Python 3.15.0rc3 release page</a> · 2 Oct 2026</span></li><li id="s55"><span class="n">[55]</span><span><span class="pub">Java.com</span>: <a href="https://java.com/releases">Java release schedule</a> · Oct 2026</span></li><li id="s56"><span class="n">[56]</span><span><span class="pub">Unite.AI</span>: <a href="https://www.unite.ai/automation-anywhere-agrees-to-acquire-conversational-ai-firm-boost-ai/">Automation Anywhere agrees to acquire Boost.ai</a> · 7 Oct 2026</span></li><li id="s57"><span class="n">[57]</span><span><span class="pub">Benzinga</span>: <a href="https://www.benzinga.com/markets/tech/26/10/62208031/spacex-apollo-40-billion-nvidia-chips-financing">SpaceX, Apollo $40 billion Nvidia chip financing (context…</a> · 6 Oct 2026</span></li><li id="s58"><span class="n">[58]</span><span><span class="pub">CNBC</span>: <a href="https://www.cnbc.com/2026/10/08/tsmc-september-sales-hit-another-record-as-ai-boom-rolls-on.html">TSMC&#39;s September sales surge year over year</a> · 8 Oct 2026</span></li><li id="s59"><span class="n">[59]</span><span><span class="pub">DIGITIMES</span>: <a href="https://digitimes.com/news/a20261007PD224/2027-price-ic-design-2026-design.html">IC designers to pass cost increases through 2027</a> · 7 Oct 2026</span></li><li id="s60"><span class="n">[60]</span><span><span class="pub">The Washington Times</span>: <a href="https://www.washingtontimes.com/news/2026/oct/7/democrats-compete-dominate-party-perspective-ai-regulation/">Democrats compete to shape party&#39;s AI regulation stance</a> · 7 Oct 2026</span></li><li id="s61"><span class="n">[61]</span><span><span class="pub">Zee Business</span>: <a href="https://www.zeebiz.com/india/news-india-mobile-congress-2026-pm-modi-says-india-s-next-phase-of-digital-growth-to-focus-on-6g-ai-chips-403598">IMC 2026: next phase to focus on 6G, AI, chips</a> · 8 Oct 2026</span></li><li id="s62"><span class="n">[62]</span><span><span class="pub">Kotak Neo</span>: <a href="https://www.kotakneo.com/news/stocks/tcs-q2-results-preview-revenue-profit-margin-deal-wins-ai/">TCS Q2 results preview</a> · Oct 2026</span></li><li id="s63"><span class="n">[63]</span><span><span class="pub">DealStreetAsia</span>: <a href="https://www.dealstreetasia.com/stories/desible-ai-sunfox-tech-bytexl-zomint-497476">Desible.ai, byteXL and others raise funding</a> · 7 Oct 2026</span></li><li id="s64"><span class="n">[64]</span><span><span class="pub">Forbes</span>: <a href="https://www.forbes.com/sites/stuartanderson/2026/10/01/judge-strikes-down-latest-version-of-100000-h-1b-immigration-fee/">Judge strikes down latest $100,000 H-1B fee (background: 1 Oct)</a> · 1 Oct 2026</span></li><li id="s65"><span class="n">[65]</span><span><span class="pub">Angel One</span>: <a href="https://www.angelone.in/news/stocks/tech-mahindra-share-price-in-focus-board-to-consider-q2fy27-earnings-results-on-october-15-2026">Tech Mahindra board to consider Q2 FY27 results on 15 Oct</a> · Oct 2026</span></li></ol>
+  
+</div></div>
+      
+    
+  </div>
+
+  <footer class="foot">
+    <span>Thursday, 8 October 2026 · window 7 Oct 2026, 15:17 IST to 8 Oct 2026, 15:17 IST</span>
+    <span>Superscripts link to sources · full list p.10</span>
+    <span class="pg">Page 10 of 10</span>
+  </footer>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "edition": "2026-10-08",
+  "theme": "builder",
+  "theme_name": "Builder's Edition",
+  "theme_scores": {
+    "broadsheet": 6.0,
+    "modelday": 18.19,
+    "markets": 5.39,
+    "trust": 12.8,
+    "indiadesk": 6.06,
+    "clinical": 6.06,
+    "builder": 29.65
+  },
+  "words": 3014,
+  "pdf": {
+    "file": "rajesh-ai-it-daily-2026-10-08.pdf",
+    "pages": 10,
+    "links": 235,
+    "fit": [
+      {
+        "page": 1,
+        "scale": 1.044,
+        "overflow_px": 0,
+        "fill": 0.986
+      },
+      {
+        "page": 2,
+        "scale": 1.158,
+        "overflow_px": 0,
+        "fill": 0.976
+      },
+      {
+        "page": 3,
+        "scale": 1.293,
+        "overflow_px": 0,
+        "fill": 0.986
+      },
+      {
+        "page": 4,
+        "scale": 1.225,
+        "overflow_px": 0,
+        "fill": 0.978
+      },
+      {
+        "page": 5,
+        "scale": 1.314,
+        "overflow_px": 0,
+        "fill": 0.969
+      },
+      {
+        "page": 6,
+        "scale": 1.292,
+        "overflow_px": 0,
+        "fill": 0.986
+      },
+      {
+        "page": 7,
+        "scale": 1.32,
+        "overflow_px": 0,
+        "fill": 0.986
+      },
+      {
+        "page": 8,
+        "scale": 1.32,
+        "overflow_px": 0,
+        "fill": 0.985
+      },
+      {
+        "page": 9,
+        "scale": 1.32,
+        "overflow_px": 0,
+        "fill": 0.924
+      },
+      {
+        "page": 10,
+        "scale": 0.813,
+        "overflow_px": 0,
+        "fill": 0.991
+      }
+    ]
+  },
+  "pptx": {
+    "file": "rajesh-ai-it-daily-2026-10-08.pptx",
+    "slides": 10,
+    "with_notes": 10,
+    "links": 60,
+    "aspect": 1.778
+  },
+  "problems": []
+}

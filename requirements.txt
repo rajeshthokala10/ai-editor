@@ -1,0 +1,7 @@
+anthropic==1.12.1
+Jinja2==3.1.6
+jsonschema==4.26.0
+MarkupSafe==3.0.3
+playwright==1.63.0
+pypdf==6.17.0
+python-pptx==1.0.2
