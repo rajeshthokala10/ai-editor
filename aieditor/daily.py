@@ -56,13 +56,68 @@ def produce(edition_dir: Path) -> Path:
     return path
 
 
+def preflight(need_api: bool) -> list[str]:
+    """Log which settings are present (never their values) and return blocking problems."""
+    names = ["ANTHROPIC_API_KEY", "AIEDITOR_MODEL", "MAIL_TO", "RESEND_API_KEY", "MAIL_FROM",
+             "SMTP_HOST", "SMTP_USER", "SMTP_PASSWORD", "EDITIONS_DIR"]
+    log.info("config: %s", ", ".join(f"{n}={'set' if os.environ.get(n) else 'unset'}" for n in names))
+    problems = []
+    if need_api and not os.environ.get("ANTHROPIC_API_KEY"):
+        problems.append("ANTHROPIC_API_KEY is not set: add it under the service's Variables")
+    if os.environ.get("MAIL_TO") and not (os.environ.get("RESEND_API_KEY") or os.environ.get("SMTP_HOST")):
+        log.warning("MAIL_TO is set but no RESEND_API_KEY or SMTP_HOST: the edition will not be emailed")
+    return problems
+
+
+def check() -> int:
+    """--check: verify settings, Claude API access and Chromium without a full run."""
+    problems = preflight(need_api=True)
+    if not problems:
+        from .research import ping
+
+        try:
+            log.info("Claude API ok (%s)", ping())
+        except Exception as e:  # report any API failure in one readable line
+            problems.append(f"Claude API call failed: {type(e).__name__}: {e}")
+    try:
+        from playwright.sync_api import sync_playwright
+
+        from .render_pdf import chromium_path
+
+        with sync_playwright() as p:
+            b = p.chromium.launch(executable_path=chromium_path())
+            b.close()
+        log.info("Chromium ok")
+    except Exception as e:
+        problems.append(f"Chromium failed to start: {e}")
+    for p in problems:
+        log.error("CHECK FAILED: %s", p)
+    return 1 if problems else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--no-email", action="store_true")
     ap.add_argument("--from-json", type=Path, help="render and send an existing edition.json")
+    ap.add_argument("--check", action="store_true", help="verify settings, API access and Chromium, then exit")
     args = ap.parse_args(argv)
 
+    if args.check:
+        return check()
+    problems = preflight(need_api=not args.from_json)
+    if problems:
+        for p in problems:
+            log.error("RUN FAILED: %s", p)
+        return 2
+    try:
+        return run(args)
+    except Exception as e:
+        log.exception("RUN FAILED: %s: %s", type(e).__name__, e)
+        return 1
+
+
+def run(args) -> int:
     if args.from_json:
         path = args.from_json.resolve()
         result = build(path)

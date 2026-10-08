@@ -81,7 +81,8 @@ Outputs land in `editions/<date>/`: `edition.json`, `rajesh-ai-it-daily-<date>.p
    | `MAIL_FROM` | `AI Editor <onboarding@resend.dev>` works for sending to the email you signed up to Resend with; use a verified domain to send elsewhere |
 
    For SMTP instead of Resend, set `SMTP_HOST=smtp.gmail.com`, `SMTP_PORT=465`, `SMTP_USER` and `SMTP_PASSWORD` (a Gmail app password). Note that Railway's lower plans may block SMTP ports.
-3. Check **Settings → Cron Schedule** shows `30 4,12 * * *`. Trigger one run from the dashboard and read the logs: each run logs the window, theme, word count and email result.
+3. Check **Settings → Cron Schedule** shows `30 4,12 * * *`. Trigger one run from the dashboard and read the logs. Every run first logs which settings are present (never their values). A failure ends with a single `RUN FAILED: <reason>` line. Each successful run logs the window, theme, word count and email result.
+4. To test quickly without a full run, temporarily set the start command to `python -m aieditor.daily --check`. It verifies the API key with one tiny request and confirms Chromium starts.
 
 Optional settings:
 

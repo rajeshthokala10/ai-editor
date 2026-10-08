@@ -166,8 +166,27 @@ def _client() -> anthropic.Anthropic:
 
 
 def _final(client: anthropic.Anthropic, **kw):
-    with client.beta.messages.stream(**kw) as stream:
-        return stream.get_final_message()
+    try:
+        with client.beta.messages.stream(**kw) as stream:
+            return stream.get_final_message()
+    except anthropic.BadRequestError as e:
+        # The fallback beta is optional: if this account or model rejects it, run without it.
+        if "fallbacks" in kw and ("fallback" in str(e).lower() or "beta" in str(e).lower()):
+            log.warning("API rejected the fallback beta (%s); retrying without it", e)
+            kw = {k: v for k, v in kw.items() if k not in ("fallbacks", "betas")}
+            with client.beta.messages.stream(**kw) as stream:
+                return stream.get_final_message()
+        raise
+
+
+def ping(client: anthropic.Anthropic | None = None) -> str:
+    """One tiny request to prove the key, model and billing work."""
+    client = client or _client()
+    msg = client.messages.create(
+        model=MODEL, max_tokens=64, output_config={"effort": "low"},
+        messages=[{"role": "user", "content": "Reply with the single word: ready"}],
+    )
+    return f"{msg.model}: {_text(msg).strip()[:40]!r}"
 
 
 def _text(msg) -> str:

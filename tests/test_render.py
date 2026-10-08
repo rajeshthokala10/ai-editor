@@ -55,9 +55,28 @@ def test_daily_pipeline_with_mocked_claude(tmp_path, monkeypatch):
     monkeypatch.setattr(research, "Composer", FakeComposer)
     monkeypatch.setattr(build_mod, "EDITIONS", tmp_path)
     monkeypatch.setenv("EDITIONS_DIR", str(tmp_path))
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
 
     assert daily.main(["--no-email"]) == 0
     assert len(calls["repair"]) == 1 and "exactly 10 pages" in calls["repair"][0][0]
     out = next(tmp_path.glob("*/build.json"))
     report = json.loads(out.read_text())
     assert report["pdf"]["pages"] == 10 and report["problems"] == []
+
+
+def test_missing_api_key_fails_fast_with_clear_message(monkeypatch, caplog):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    assert daily.main(["--no-email"]) == 2
+    assert "ANTHROPIC_API_KEY is not set" in caplog.text
+
+
+def test_unexpected_error_is_logged_not_raised(monkeypatch, caplog):
+    from aieditor import research
+
+    def boom(window):
+        raise RuntimeError("upstream exploded")
+
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+    monkeypatch.setattr(research, "research", boom)
+    assert daily.main(["--no-email"]) == 1
+    assert "RUN FAILED: RuntimeError: upstream exploded" in caplog.text
